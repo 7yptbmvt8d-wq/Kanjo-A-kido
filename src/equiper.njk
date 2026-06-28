@@ -22,7 +22,11 @@ description: "Le matériel pour pratiquer l'Aïkido : aïkidogi, ceintures, haka
     <div class="feature-cards">
       {%- for it in p.items %}
       <div class="feature-card">
+        {% if it.image %}
+        <div class="feature-card__media" style="background-image:url('{{ it.image }}'); background-size:cover; background-position:center;"></div>
+        {% else %}
         <div class="feature-card__media placeholder-media">[ photo · {{ it.title | lower }} ]</div>
+        {% endif %}
         <div class="feature-card__body">
           <div class="feature-card__kanji">{{ it.kanji }}</div>
           <h3 class="feature-card__title">{{ it.title }}</h3>

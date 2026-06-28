@@ -170,6 +170,7 @@ collections:
             fields:
               - { label: "Kanji", name: kanji, widget: string }
               - { label: "Titre", name: title, widget: string }
+              - { label: "Photo", name: image, widget: image, required: false }
               - { label: "Description", name: desc, widget: text }
       - name: galerie_textes
         label: "Galerie (textes)"
