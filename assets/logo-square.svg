@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Kanjo Aïkido Isulanu">
+  <!-- Placeholder square logo (favicon / OG image). Replace with logo-noir-1024.png. -->
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7cd7d"/>
+      <stop offset="0.5" stop-color="#c9a24d"/>
+      <stop offset="1" stop-color="#a8842c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="#131009"/>
+  <circle cx="512" cy="512" r="470" fill="none" stroke="#c9a24d" stroke-width="2" opacity="0.55"/>
+  <text x="512" y="270" text-anchor="middle" fill="#c9a24d"
+        font-family="'Cinzel',serif" font-size="46" letter-spacing="14">KANJO AÏKIDO</text>
+  <text x="512" y="460" text-anchor="middle" fill="url(#gold)"
+        font-family="'Hiragino Mincho ProN','Yu Mincho','Songti SC','Noto Serif CJK JP',serif"
+        font-size="200">感</text>
+  <text x="512" y="650" text-anchor="middle" fill="url(#gold)"
+        font-family="'Hiragino Mincho ProN','Yu Mincho','Songti SC','Noto Serif CJK JP',serif"
+        font-size="200">情</text>
+  <text x="512" y="780" text-anchor="middle" fill="#c9a24d"
+        font-family="'Space Grotesk',sans-serif" font-size="60" letter-spacing="22">ISULANU</text>
+  <text x="512" y="850" text-anchor="middle" fill="#8a7d5c"
+        font-family="'Cormorant Garamond',serif" font-style="italic" font-size="38">Isula di Corsica</text>
+</svg>
