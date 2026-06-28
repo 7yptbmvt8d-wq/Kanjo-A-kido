@@ -1,11 +1,14 @@
 {
-  "brand": { "name": "KANJO AÏKIDO", "sub": "ISULANU" },
+  "brand": {
+    "name": "KANJO AÏKIDO",
+    "sub": "ISULANU"
+  },
   "contact": {
     "email": "kanjo.aikido@gmail.com",
     "phone": "06.14.50.89.98",
     "phoneIntl": "+33614508998",
     "person": "Sébastien",
-    "address": "[ rue · à préciser ]",
+    "address": "COSEC de Vescovato",
     "ville": "20215 Vescovato · Haute-Corse"
   },
   "social": {
@@ -17,21 +20,74 @@
   "footerLead": "Dans l'esprit Kanjo, nous tissons des liens avec les dojos de l'île et du continent — visiteurs bienvenus sur les tatamis amis.",
   "footerCopy": "© 2026 · Isula di Corsica",
   "horaires": [
-    { "label": "Ados & adultes", "value": "[ jours & horaires ]" },
-    { "label": "Enfants", "value": "[ jours & horaires ]" },
-    { "label": "Armes (bokken / jō)", "value": "[ à préciser ]" }
+    {
+      "label": "Ados & adultes",
+      "value": "[ jours & horaires ]"
+    },
+    {
+      "label": "Enfants",
+      "value": "Mercredi - 15h30 à 17h00"
+    }
   ],
   "tarifs": [
-    { "name": "Enfants · 6 à 12 ans", "amount": "155 €", "period": "par an", "featured": false, "features": ["Accès aux cours enfants", "Chèque pass'sport accepté", "Licence & assurance FFAB"] },
-    { "name": "Adultes", "amount": "225 €", "period": "par an", "featured": true, "features": ["Accès à tous les cours", "Licence & assurance FFAB", "Paiement en 3 fois possible"] },
-    { "name": "Famille", "amount": "315 €", "period": "1 adulte + 1 enfant", "featured": false, "features": ["Pour deux pratiquants", "Licence & assurance FFAB", "Paiement en 3 fois possible"] }
+    {
+      "name": "Enfants · 6 à 12 ans",
+      "amount": "155 €",
+      "period": "par an",
+      "featured": false,
+      "features": [
+        "Accès aux cours enfants",
+        "Chèque pass'sport accepté",
+        "Licence & assurance FFAB"
+      ]
+    },
+    {
+      "name": "Adultes",
+      "amount": "225 €",
+      "period": "par an",
+      "featured": true,
+      "features": [
+        "Accès à tous les cours",
+        "Licence & assurance FFAB",
+        "Paiement en 3 fois possible"
+      ]
+    },
+    {
+      "name": "Famille",
+      "amount": "315 €",
+      "period": "1 adulte + 1 enfant",
+      "featured": false,
+      "features": [
+        "Pour deux pratiquants",
+        "Licence & assurance FFAB",
+        "Paiement en 3 fois possible"
+      ]
+    }
   ],
   "partners": [
-    { "name": "Shumeikan · Bras", "url": "https://www.ffabaikido.com/fr/l-ecole-dojo-shumeikan-de-la-ffab-110.html" },
-    { "name": "ASPC · Les Ponts-de-Cé", "url": "http://aspc.aikido.angers.free.fr/" },
-    { "name": "Aïkido49 · Trélazé", "url": "https://www.aikido49.fr/" },
-    { "name": "Costa Verde · Corse", "url": "http://www.costaverdeaikido.fr" },
-    { "name": "Shin Aïkido · Corse", "url": "https://www.shinaikido.fr/" },
-    { "name": "FFAB", "url": "https://www.ffabaikido.fr" }
+    {
+      "name": "Shumeikan · Bras",
+      "url": "https://www.ffabaikido.com/fr/l-ecole-dojo-shumeikan-de-la-ffab-110.html"
+    },
+    {
+      "name": "ASPC · Les Ponts-de-Cé",
+      "url": "http://aspc.aikido.angers.free.fr/"
+    },
+    {
+      "name": "Aïkido49 · Trélazé",
+      "url": "https://www.aikido49.fr/"
+    },
+    {
+      "name": "Costa Verde · Corse",
+      "url": "http://www.costaverdeaikido.fr"
+    },
+    {
+      "name": "Shin Aïkido · Corse",
+      "url": "https://www.shinaikido.fr/"
+    },
+    {
+      "name": "FFAB",
+      "url": "https://www.ffabaikido.fr"
+    }
   ]
 }
