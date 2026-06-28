@@ -65,17 +65,17 @@ Il reste quelques `[ … ]` et éléments à fournir :
 - **Photos** : galerie (`galerie.html`), portraits O-Senseï / Tamura
   (`histoire.html`), portrait enseignant (`enseignant.html`), visuels
   équipement (`equiper.html`).
+- **Adresse précise** : la rue du dojo (`dojo.html`, `contact.html`) — seule la
+  commune est connue : **20215 Vescovato, Haute-Corse**.
 - **Carte** : remplacer le placeholder de `contact.html` par un embed Google Maps
-  (adresse : Rue Henri et Robert de Cholet, 49220 Le Lion-d'Angers).
+  (Vescovato, Haute-Corse).
 - **Formulaire de contact** : connecter à un service d'envoi ou garder le
   `mailto:kanjo.aikido@gmail.com`.
 - **Stages** : le calendrier est indicatif (issu de la maquette) ; ajuster avec
   les vraies dates.
 
-## ⚠️ Identité géographique à confirmer
+## Ancrage géographique
 
-Le logo porte « ISULANU / Isula di Corsica » (ancrage corse), mais le dojo est
-établi au **Lion-d'Angers (Maine-et-Loire)** — l'enseignant a des racines
-corses et plusieurs dojos partenaires y sont. L'adresse réelle est utilisée
-partout ; à confirmer si la mention « Isula di Corsica » (hero, footer) doit
-être conservée telle quelle ou nuancée.
+Le dojo est en **Corse, à Vescovato (20215, Haute-Corse)** — cohérent avec la
+marque « ISULANU / Isula di Corsica » du logo. (L'ancienne adresse « Le
+Lion-d'Angers » du site source était obsolète et a été remplacée partout.)
