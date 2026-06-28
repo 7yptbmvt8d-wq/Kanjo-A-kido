@@ -1,9 +1,4 @@
 {
-  "logo": "",
-  "brand": {
-    "name": "KANJO AÏKIDO",
-    "sub": "ISULANU"
-  },
   "contact": {
     "email": "kanjo.aikido@gmail.com",
     "phone": "06.14.50.89.98",
@@ -12,14 +7,29 @@
     "address": "COSEC de Vescovato",
     "ville": "20215 Vescovato · Haute-Corse"
   },
-  "social": {
-    "youtube": "https://www.youtube.com/@Kanjo.aikido",
-    "facebook": "https://www.facebook.com/profile.php?id=61573399512860",
-    "whatsapp": "https://whatsapp.com/channel/0029VbBHCcFDJ6GyHiY9nk0u",
-    "ffab": "https://www.ffabaikido.fr"
+  "brand": {
+    "name": "KANJO AÏKIDO",
+    "sub": "ISULANU"
   },
-  "footerLead": "Dans l'esprit Kanjo, nous tissons des liens avec les dojos de l'île et du continent — visiteurs bienvenus sur les tatamis amis.",
-  "footerCopy": "© 2026 · Isula di Corsica",
+  "partners": [
+    {
+      "name": "Shumeikan · Bras",
+      "url": "https://www.ffabaikido.com/fr/l-ecole-dojo-shumeikan-de-la-ffab-110.html"
+    },
+    {
+      "name": "Costa Verde · Corse",
+      "url": "http://www.costaverdeaikido.fr"
+    },
+    {
+      "name": "Shin Aïkido · Corse",
+      "url": "https://www.shinaikido.fr/"
+    },
+    {
+      "name": "FFAB",
+      "url": "https://www.ffabaikido.fr"
+    }
+  ],
+  "logo": "/assets/uploads/kanjo-aikido-isulanu-noir-1024.png",
   "horaires": [
     {
       "label": "Ados & adultes",
@@ -30,6 +40,13 @@
       "value": "Mercredi - 15h30 à 17h00"
     }
   ],
+  "social": {
+    "youtube": "https://www.youtube.com/@Kanjo.aikido",
+    "facebook": "https://www.facebook.com/profile.php?id=61573399512860",
+    "whatsapp": "https://whatsapp.com/channel/0029VbBHCcFDJ6GyHiY9nk0u",
+    "ffab": "https://www.ffabaikido.fr"
+  },
+  "footerCopy": "© 2026 · Isula di Corsica",
   "tarifs": [
     {
       "name": "Enfants · 6 à 12 ans",
@@ -65,22 +82,5 @@
       ]
     }
   ],
-  "partners": [
-    {
-      "name": "Shumeikan · Bras",
-      "url": "https://www.ffabaikido.com/fr/l-ecole-dojo-shumeikan-de-la-ffab-110.html"
-    },
-    {
-      "name": "Costa Verde · Corse",
-      "url": "http://www.costaverdeaikido.fr"
-    },
-    {
-      "name": "Shin Aïkido · Corse",
-      "url": "https://www.shinaikido.fr/"
-    },
-    {
-      "name": "FFAB",
-      "url": "https://www.ffabaikido.fr"
-    }
-  ]
+  "footerLead": "Dans l'esprit Kanjo, nous tissons des liens avec les dojos de l'île et du continent — visiteurs bienvenus sur les tatamis amis."
 }
