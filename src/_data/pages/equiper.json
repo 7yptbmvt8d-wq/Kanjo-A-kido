@@ -4,8 +4,23 @@
   "lead": "Rien à acheter pour commencer : une tenue de sport suffit. Le matériel vient avec la pratique.",
   "note": "Pas besoin de tout acheter pour débuter : l'enseignant vous orientera vers le bon matériel et les bonnes tailles, au bon moment.",
   "items": [
-    { "kanji": "合気道着", "title": "Aïkidogi", "image": "", "desc": "Le kimono : essentiel pour commencer votre pratique. La ceinture blanche marque le début de votre formation ; la ceinture noire (1ᵉʳ Dan), le début d'un travail plus profond de l'Aïkido." },
-    { "kanji": "袴", "title": "Hakama", "image": "", "desc": "Le pantalon plissé traditionnel : un investissement plus conséquent. Le professeur vous en autorise le port le moment opportun." },
-    { "kanji": "武器", "title": "Armes", "image": "", "desc": "Bokken (sabre), jō (bâton) et tanto (couteau). Les armes permettent une autre approche de l'Aïkido, mais ne sont pas nécessaires au début." }
+    {
+      "kanji": "合気道着",
+      "title": "Aïkidogi",
+      "image": "/assets/uploads/aikidogi.png",
+      "desc": "Le kimono : essentiel pour commencer votre pratique. La ceinture blanche marque le début de votre formation ; la ceinture noire (1ᵉʳ Dan), le début d'un travail plus profond de l'Aïkido."
+    },
+    {
+      "kanji": "袴",
+      "title": "Hakama",
+      "image": "/assets/uploads/hakama.png",
+      "desc": "Le pantalon plissé traditionnel : un investissement plus conséquent. Le professeur vous en autorise le port le moment opportun."
+    },
+    {
+      "kanji": "武器",
+      "title": "Armes",
+      "image": "/assets/uploads/lot-armes.png",
+      "desc": "Bokken (sabre), jō (bâton) et tanto (couteau). Les armes permettent une autre approche de l'Aïkido, mais ne sont pas nécessaires au début."
+    }
   ]
 }
