@@ -38,6 +38,10 @@
     {
       "label": "Enfants",
       "value": "Mercredi - 15h30 à 17h00"
+    },
+    {
+      "label": "Jeunes (13 à 18 ans)",
+      "value": "[ jours & horaires ]"
     }
   ],
   "social": {
@@ -55,6 +59,17 @@
       "featured": false,
       "features": [
         "Accès aux cours enfants",
+        "Chèque pass'sport accepté",
+        "Licence & assurance FFAB"
+      ]
+    },
+    {
+      "name": "Jeunes · 13 à 18 ans",
+      "amount": "155 €",
+      "period": "par an",
+      "featured": false,
+      "features": [
+        "Accès aux cours jeunes",
         "Chèque pass'sport accepté",
         "Licence & assurance FFAB"
       ]
