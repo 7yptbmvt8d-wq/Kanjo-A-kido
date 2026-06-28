@@ -4,9 +4,23 @@
   "lead": "Les stages réunissent les dojos autour d'un enseignant invité — un temps fort de la progression et du lien entre pratiquants.",
   "note": "Calendrier indicatif — dates définitives communiquées au dojo et sur la chaîne WhatsApp.",
   "stages": [
-    { "month": "OCT.", "title": "Stage de rentrée", "desc": "Reprise de la saison, ouvert à tous les niveaux.", "meta": "DOJO · [ VILLE ]" },
-    { "month": "DÉC.", "title": "Stage inter-dojos", "desc": "Rencontre avec les dojos partenaires de l'île.", "meta": "À CONFIRMER" },
-    { "month": "JANV.", "title": "Stage technique — armes", "desc": "Bokken & jō, travail des déplacements et de la distance.", "meta": "À CONFIRMER" },
-    { "month": "AVR.", "title": "Passage de grades", "desc": "Kyu et dan, sous l'égide de la FFAB.", "meta": "SUR INSCRIPTION" }
+    {
+      "month": "OCT.",
+      "title": "Stage de rentrée",
+      "desc": "Reprise de la saison, ouvert à tous les niveaux.",
+      "meta": "DOJO · [ VILLE ]"
+    },
+    {
+      "month": "DÉC.",
+      "title": "Stage inter-dojos",
+      "desc": "Rencontre avec les dojos partenaires de l'île.",
+      "meta": "À CONFIRMER"
+    },
+    {
+      "month": "JANV.",
+      "title": "Stage technique — armes",
+      "desc": "Bokken & jō, travail des déplacements et de la distance.",
+      "meta": "À CONFIRMER"
+    }
   ]
 }
