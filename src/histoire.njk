@@ -76,7 +76,7 @@ description: "Aux sources de l'Aïkido : O-Senseï Morihei Ueshiba, les trois ka
         {%- endfor %}
       </div>
       {% if p.tamuraPhoto %}
-      <img src="{{ p.tamuraPhoto }}" alt="Nobuyoshi Tamura Senseï" style="display:block; width:100%; max-width:420px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
+      <img src="{{ p.tamuraPhoto }}" alt="Nobuyoshi Tamura Senseï" style="display:block; width:100%; max-width:420px; aspect-ratio:7/10; object-fit:cover; object-position:center; margin:0 auto; border:1px solid var(--gold-18);">
       {% else %}
       <div class="placeholder-media" style="height:440px;">[ portrait · Tamura Senseï ]</div>
       {% endif %}

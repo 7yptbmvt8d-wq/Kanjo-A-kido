@@ -10,7 +10,11 @@ description: "Dojo d'Aïkido à Vescovato (Haute-Corse), ouvert à toutes et à 
 <section class="hero">
   <div class="hero__frame"></div>
   <div class="hero__inner">
-    <img class="hero__logo" src="{{ site.logo or '/assets/kanji-kanjo.svg' }}" alt="Kanjo">
+    {% if site.logo %}
+    <img src="{{ site.logo }}" alt="Kanjo Aïkido Isulanu" style="height:250px; width:auto; margin:0 auto 30px; display:block;">
+    {% else %}
+    <img class="hero__logo" src="/assets/kanji-kanjo.svg" alt="Kanjo">
+    {% endif %}
     <div class="hero__eyebrow">{{ p.heroEyebrow }}</div>
     <h1 class="hero__title">{{ p.heroTitle }}</h1>
     <p class="hero__lead">{{ p.heroLead }}</p>
