@@ -1,16 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 200" role="img" aria-label="Kanjo">
-  <!-- Placeholder logo. Replace with the official gold kanji PNG (kanji-kanjo.png). -->
+  <!-- Recréation vectorielle des kanji dorés du logo. Pour l'original exact
+       (texture or), déposer le PNG via l'admin / GitHub. -->
   <defs>
     <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#e7cd7d"/>
+      <stop offset="0" stop-color="#e9d086"/>
       <stop offset="0.5" stop-color="#c9a24d"/>
       <stop offset="1" stop-color="#a8842c"/>
     </linearGradient>
   </defs>
   <text x="62" y="86" text-anchor="middle" fill="url(#gold)"
         font-family="'Hiragino Mincho ProN','Yu Mincho','Songti SC','Noto Serif CJK JP',serif"
-        font-size="96">感</text>
+        font-size="96">寅</text>
   <text x="62" y="188" text-anchor="middle" fill="url(#gold)"
         font-family="'Hiragino Mincho ProN','Yu Mincho','Songti SC','Noto Serif CJK JP',serif"
-        font-size="96">情</text>
+        font-size="96">枢</text>
 </svg>
