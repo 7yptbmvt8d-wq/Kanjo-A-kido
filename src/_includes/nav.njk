@@ -1,11 +1,15 @@
 <header class="nav">
   <div class="nav__inner">
     <a class="nav__logo" href="/index.html">
-      <img src="{{ site.logo or '/assets/kanji-kanjo.svg' }}" alt="Kanjo Aïkido">
+      {% if site.logo %}
+      <img src="{{ site.logo }}" alt="Kanjo Aïkido Isulanu" style="height:56px; width:auto;">
+      {% else %}
+      <img src="/assets/kanji-kanjo.svg" alt="Kanjo Aïkido">
       <span class="nav__logo-text">
         <span class="nav__logo-name">{{ site.brand.name | replace(" ", "&nbsp;") | safe }}</span>
         <span class="nav__logo-sub">{{ site.brand.sub }}</span>
       </span>
+      {% endif %}
     </a>
     <nav class="nav__links">
       <a href="/index.html" class="{{ 'active' if active == 'accueil' }}">ACCUEIL</a>

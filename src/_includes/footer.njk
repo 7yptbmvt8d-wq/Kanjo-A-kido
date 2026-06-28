@@ -16,11 +16,15 @@
 <footer class="footer-bar">
   <div class="footer-bar__inner">
     <a class="footer-bar__logo" href="/index.html">
-      <img src="{{ site.logo or '/assets/kanji-kanjo.svg' }}" alt="Kanjo Aïkido">
+      {% if site.logo %}
+      <img src="{{ site.logo }}" alt="Kanjo Aïkido Isulanu" style="height:64px; width:auto;">
+      {% else %}
+      <img src="/assets/kanji-kanjo.svg" alt="Kanjo Aïkido">
       <span class="nav__logo-text">
         <span class="footer-bar__logo-name">{{ site.brand.name | replace(" ", "&nbsp;") | safe }}</span>
         <span class="footer-bar__logo-sub">{{ site.brand.sub }}</span>
       </span>
+      {% endif %}
     </a>
     <div class="footer-bar__links">
       <a href="{{ site.social.youtube }}">YOUTUBE</a>
