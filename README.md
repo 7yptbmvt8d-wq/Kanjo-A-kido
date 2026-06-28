@@ -47,25 +47,35 @@ Tout est centralisé dans `css/style.css` (variables `:root`) :
 
 Polices chargées via Google Fonts dans le `<head>` de chaque page.
 
-## À compléter avant publication
+## Contenu réel intégré
 
-Les contenus entre `[ … ]` sont des placeholders :
+Les textes, coordonnées, tarifs, enseignant (Sébastien De Raedt, 3ᵉ Dan),
+dojos partenaires et liens sociaux proviennent du site existant
+(sites.google.com/view/kanjoakido) et sont en place.
 
-- **Logos** : déposer les vrais visuels dans `assets/` (voir `assets/README.md`).
-  Les fichiers actuels sont des **placeholders SVG**.
-- **Coordonnées** : email, téléphone, adresse, ville (`dojo.html`, `contact.html`).
-- **Horaires & tarifs** : `dojo.html`.
-- **Dates de stages** : `stages.html`.
-- **Photos** : `galerie.html`, portraits (`histoire.html`, `enseignant.html`),
-  visuels équipement (`equiper.html`).
-- **Carte** : remplacer le placeholder de `contact.html` par un embed Google Maps.
-- **Liens sociaux** : Facebook / WhatsApp (`#` actuellement) dans le footer.
-- **Formulaire de contact** : connecter à un service d'envoi ou ajuster le `mailto:`.
-- **Villes partenaires** : footer (`[ VILLE A/B/C ]`).
+## À compléter / fournir
 
-## ⚠️ Incohérence géographique à trancher
+Il reste quelques `[ … ]` et éléments à fournir :
 
-La marque « Isulanu » / « Isula di Corsica » suggère un ancrage corse, mais la
-bio de l'enseignant mentionne une fondation du dojo au **Lion-d'Angers
-(Maine-et-Loire)**. Vérifier l'adresse réelle et harmoniser (adresse, mention
-« © Isula di Corsica », ancrage géographique) avant mise en ligne.
+- **Logo** : déposer le vrai logo dans `assets/` (voir `assets/README.md`).
+  Les fichiers actuels sont des **placeholders SVG** (le vrai logo est le rond
+  noir & or « KANJO AÏKIDO / ISULANU »).
+- **Horaires** : jours et heures des cours ados/adultes et enfants (`dojo.html`)
+  — non renseignés sur le site source.
+- **Photos** : galerie (`galerie.html`), portraits O-Senseï / Tamura
+  (`histoire.html`), portrait enseignant (`enseignant.html`), visuels
+  équipement (`equiper.html`).
+- **Carte** : remplacer le placeholder de `contact.html` par un embed Google Maps
+  (adresse : Rue Henri et Robert de Cholet, 49220 Le Lion-d'Angers).
+- **Formulaire de contact** : connecter à un service d'envoi ou garder le
+  `mailto:kanjo.aikido@gmail.com`.
+- **Stages** : le calendrier est indicatif (issu de la maquette) ; ajuster avec
+  les vraies dates.
+
+## ⚠️ Identité géographique à confirmer
+
+Le logo porte « ISULANU / Isula di Corsica » (ancrage corse), mais le dojo est
+établi au **Lion-d'Angers (Maine-et-Loire)** — l'enseignant a des racines
+corses et plusieurs dojos partenaires y sont. L'adresse réelle est utilisée
+partout ; à confirmer si la mention « Isula di Corsica » (hero, footer) doit
+être conservée telle quelle ou nuancée.
