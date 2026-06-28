@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: 7yptbmvt8d-wq/Kanjo-A-kido
   branch: main
 
 # Dossier où sont déposées les images téléversées (logo, photos…).
