@@ -1,0 +1,44 @@
+---
+layout: base.njk
+active: equiper
+permalink: /equiper.html
+title_tag: "S'équiper — Kanjo Aïkido Isulanu"
+description: "Le matériel pour pratiquer l'Aïkido : aïkidogi, ceintures, hakama et armes en bois (bokken, jō, tanto)."
+---
+{% set p = pages.equiper %}
+<!-- ===== HEADER ===== -->
+<section class="section section--tight">
+  <div class="kanji-watermark" style="font-size:200px; right:-20px; top:0;">道着</div>
+  <div class="section__inner" style="text-align:center; position:relative; z-index:1;">
+    <div class="eyebrow">{{ p.eyebrow }}</div>
+    <h1 class="hero__title" style="font-size:clamp(34px,5vw,58px);">{{ p.title }}</h1>
+    <p class="section-lead" style="max-width:620px; margin:0 auto;">{{ p.lead }}</p>
+  </div>
+</section>
+
+<!-- ===== CARTES ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="feature-cards">
+      {%- for it in p.items %}
+      <div class="feature-card">
+        <div class="feature-card__media placeholder-media">[ photo · {{ it.title | lower }} ]</div>
+        <div class="feature-card__body">
+          <div class="feature-card__kanji">{{ it.kanji }}</div>
+          <h3 class="feature-card__title">{{ it.title }}</h3>
+          <p class="feature-card__desc">{{ it.desc | safe }}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="note-italic">{{ p.note }}</p>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="section__inner">
+    <h2 class="cta-band__title">Pas besoin d'équipement pour essayer.</h2>
+    <a class="btn-gold" href="/contact.html">RÉSERVER MON ESSAI</a>
+  </div>
+</section>

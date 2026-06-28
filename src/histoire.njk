@@ -1,0 +1,137 @@
+---
+layout: base.njk
+active: histoire
+permalink: /histoire.html
+title_tag: "Histoire de l'Aïkido — Kanjo Aïkido Isulanu"
+description: "Aux sources de l'Aïkido : O-Senseï Morihei Ueshiba, les trois kanji AI · KI · DŌ, et la lignée de Nobuyoshi Tamura en France."
+---
+{% set p = pages.histoire %}
+<!-- ===== HEADER ===== -->
+<section class="section section--tight">
+  <div class="kanji-watermark" style="font-size:200px; right:-20px; top:0;">道</div>
+  <div class="section__inner" style="text-align:center; position:relative; z-index:1;">
+    <div class="eyebrow">{{ p.eyebrow }}</div>
+    <h1 class="hero__title" style="font-size:clamp(34px,5vw,58px);">{{ p.title }}</h1>
+    <p class="section-lead" style="max-width:620px; margin:0 auto;">{{ p.lead }}</p>
+  </div>
+</section>
+
+<!-- ===== O-SENSEÏ ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="two-col">
+      <div class="placeholder-media" style="height:440px;">[ portrait · O-Senseï ]</div>
+      <div class="prose">
+        <div class="eyebrow">{{ p.osenseiEyebrow }}</div>
+        <h2 class="section-title" style="text-align:left;">{{ p.osenseiTitle }}</h2>
+        {%- for para in p.osenseiParas %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LES 3 KANJI ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">合 · 気 · 道</div>
+      <h2 class="section-title">Les trois kanji</h2>
+      <p class="section-lead">Le mot « Aïkido » s'écrit avec trois caractères qui disent tout de l'art.</p>
+    </div>
+    <div class="cards">
+      <div class="card" style="cursor:default;">
+        <div class="card__kanji">合</div>
+        <h3 class="card__title">AI — l'harmonie</h3>
+        <p class="card__desc">S'accorder, se relier, unir les énergies plutôt que de s'opposer à l'autre.</p>
+      </div>
+      <div class="card" style="cursor:default;">
+        <div class="card__kanji">気</div>
+        <h3 class="card__title">KI — l'énergie vitale</h3>
+        <p class="card__desc">Le souffle, l'énergie vitale qui circule et que la pratique apprend à canaliser.</p>
+      </div>
+      <div class="card" style="cursor:default;">
+        <div class="card__kanji">道</div>
+        <h3 class="card__title">DŌ — la voie</h3>
+        <p class="card__desc">Un chemin de progression sans fin, autant intérieur que technique.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TAMURA ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="two-col">
+      <div class="prose">
+        <div class="eyebrow">{{ p.tamuraEyebrow }}</div>
+        <h2 class="section-title" style="text-align:left;">{{ p.tamuraTitle }}</h2>
+        {%- for para in p.tamuraParas %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
+      <div class="placeholder-media" style="height:440px;">[ portrait · Tamura Senseï ]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FRISE ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">年表 — REPÈRES</div>
+      <h2 class="section-title">Une lignée vivante</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline__row">
+        <div class="timeline__year">1883</div>
+        <div>
+          <div class="timeline__title">Naissance de Morihei Ueshiba</div>
+          <div class="timeline__desc">Le futur O-Senseï, fondateur de l'Aïkido.</div>
+        </div>
+        <div class="timeline__meta">JAPON</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">1919</div>
+        <div>
+          <div class="timeline__title">Rencontre avec Onisaburo Deguchi</div>
+          <div class="timeline__desc">Un tournant qui transforme la vision martiale d'Ueshiba.</div>
+        </div>
+        <div class="timeline__meta">JAPON</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">1942</div>
+        <div>
+          <div class="timeline__title">L'art prend le nom d'« Aïkido »</div>
+          <div class="timeline__desc">Non-résistance, fluidité et protection de l'adversaire.</div>
+        </div>
+        <div class="timeline__meta">JAPON</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">1964</div>
+        <div>
+          <div class="timeline__title">L'Aïkido en France</div>
+          <div class="timeline__desc">Nobuyoshi Tamura reçoit la mission d'introduire l'art en France.</div>
+        </div>
+        <div class="timeline__meta">FRANCE · FFAB</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">2009</div>
+        <div>
+          <div class="timeline__title">« Kanjo », thème de l'année</div>
+          <div class="timeline__desc">Tamura Senseï choisit ce mot — sérénité et cœur.</div>
+        </div>
+        <div class="timeline__meta">FFAB</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">Auj.</div>
+        <div>
+          <div class="timeline__title">Kanjo Aïkido</div>
+          <div class="timeline__desc">Le dojo perpétue cet héritage, ouvert à toutes et à tous.</div>
+        </div>
+        <div class="timeline__meta">FFAB</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<section class="footer-partners">
+  <div class="footer-partners__inner">
+    <div class="footer-partners__eyebrow">DOJOS PARTENAIRES</div>
+    <h2 class="footer-partners__title">Une pratique reliée</h2>
+    <p class="footer-partners__body">{{ site.footerLead }}</p>
+    <div class="footer-partners__list">
+      {%- for p in site.partners %}
+      <a href="{{ p.url }}">{{ p.name }}</a>
+      {%- if not loop.last %}
+      <span class="footer-partners__sep">·</span>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+<footer class="footer-bar">
+  <div class="footer-bar__inner">
+    <a class="footer-bar__logo" href="/index.html">
+      <img src="/assets/kanji-kanjo.svg" alt="Kanjo Aïkido">
+      <span class="nav__logo-text">
+        <span class="footer-bar__logo-name">{{ site.brand.name | replace(" ", "&nbsp;") | safe }}</span>
+        <span class="footer-bar__logo-sub">{{ site.brand.sub }}</span>
+      </span>
+    </a>
+    <div class="footer-bar__links">
+      <a href="{{ site.social.youtube }}">YOUTUBE</a>
+      <a href="{{ site.social.facebook }}">FACEBOOK</a>
+      <a href="{{ site.social.whatsapp }}">WHATSAPP</a>
+      <a href="{{ site.social.ffab }}">FFAB</a>
+    </div>
+    <div class="footer-bar__copy">{{ site.footerCopy }}</div>
+  </div>
+</footer>

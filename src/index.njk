@@ -1,0 +1,104 @@
+---
+layout: base.njk
+active: accueil
+permalink: /index.html
+title_tag: "Kanjo Aïkido Isulanu — L'art de l'harmonie"
+description: "Dojo d'Aïkido à Vescovato (Haute-Corse), ouvert à toutes et à tous, sans compétition. Découvrez l'esprit Kanjo et venez essayer gratuitement."
+---
+{% set p = pages.accueil %}
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero__frame"></div>
+  <div class="hero__inner">
+    <img class="hero__logo" src="/assets/kanji-kanjo.svg" alt="Kanjo">
+    <div class="hero__eyebrow">{{ p.heroEyebrow }}</div>
+    <h1 class="hero__title">{{ p.heroTitle }}</h1>
+    <p class="hero__lead">{{ p.heroLead }}</p>
+    <div class="hero__actions">
+      <a class="btn-gold" href="/contact.html">ESSAI GRATUIT</a>
+      <a class="btn-outline" href="/dojo.html">DÉCOUVRIR LE DOJO</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESPRIT KANJO ===== -->
+<section class="section section--alt">
+  <div class="kanji-watermark" style="font-size:210px; left:-30px; top:40px;">感</div>
+  <div class="kanji-watermark" style="font-size:210px; right:-30px; bottom:20px;">情</div>
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">{{ p.espritEyebrow }}</div>
+      <h2 class="section-title">{{ p.espritTitle }}</h2>
+      <p class="section-lead">{{ p.espritLead }}</p>
+    </div>
+    <div class="kanji-pair">
+      <div class="kanji-block">
+        <div class="kanji-block__char">感</div>
+        <div class="kanji-block__romaji">KAN</div>
+        <div class="kanji-block__label">{{ p.kanLabel }}</div>
+        <p class="kanji-block__desc">{{ p.kanDesc }}</p>
+      </div>
+      <div class="kanji-block">
+        <div class="kanji-block__char">情</div>
+        <div class="kanji-block__romaji">JO</div>
+        <div class="kanji-block__label">{{ p.joLabel }}</div>
+        <p class="kanji-block__desc">{{ p.joDesc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CITATION ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="quote">
+      <p class="quote__text">{{ p.quote }}</p>
+      <div class="quote__cite">— L'ESPRIT DU DOJO</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UNE VOIE POUR CHACUN ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">{{ p.voieEyebrow }}</div>
+      <h2 class="section-title">{{ p.voieTitle }}</h2>
+    </div>
+    <div class="prose" style="max-width:760px; margin:0 auto; text-align:left;">
+      {%- for para in p.voieParas %}
+      <p>{{ para | safe }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPLORATION ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">道 — EXPLORER</div>
+      <h2 class="section-title">Entrer dans la voie</h2>
+    </div>
+    <div class="cards">
+      <a class="card" href="/histoire.html">
+        <div class="card__kanji">合気道</div>
+        <h3 class="card__title">L'histoire</h3>
+        <p class="card__desc">D'O-Senseï Morihei Ueshiba à la lignée Tamura : aux sources de l'Aïkido.</p>
+        <span class="card__more">DÉCOUVRIR →</span>
+      </a>
+      <a class="card" href="/dojo.html">
+        <div class="card__kanji">道場</div>
+        <h3 class="card__title">Le dojo</h3>
+        <p class="card__desc">La pratique, les horaires, l'adresse et les formules d'adhésion.</p>
+        <span class="card__more">DÉCOUVRIR →</span>
+      </a>
+      <a class="card" href="/enseignant.html">
+        <div class="card__kanji">先生</div>
+        <h3 class="card__title">L'enseignant</h3>
+        <p class="card__desc">Un parcours, une transmission, une exigence au service de l'élève.</p>
+        <span class="card__more">DÉCOUVRIR →</span>
+      </a>
+    </div>
+  </div>
+</section>

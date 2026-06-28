@@ -1,0 +1,34 @@
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="/index.html">
+      <img src="/assets/kanji-kanjo.svg" alt="Kanjo Aïkido">
+      <span class="nav__logo-text">
+        <span class="nav__logo-name">{{ site.brand.name | replace(" ", "&nbsp;") | safe }}</span>
+        <span class="nav__logo-sub">{{ site.brand.sub }}</span>
+      </span>
+    </a>
+    <nav class="nav__links">
+      <a href="/index.html" class="{{ 'active' if active == 'accueil' }}">ACCUEIL</a>
+      <a href="/histoire.html" class="{{ 'active' if active == 'histoire' }}">HISTOIRE</a>
+      <a href="/dojo.html" class="{{ 'active' if active == 'dojo' }}">LE DOJO</a>
+      <a href="/enseignant.html" class="{{ 'active' if active == 'enseignant' }}">ENSEIGNANT</a>
+      <a href="/stages.html" class="{{ 'active' if active == 'stages' }}">STAGES</a>
+      <a href="/equiper.html" class="{{ 'active' if active == 'equiper' }}">S'ÉQUIPER</a>
+      <a href="/galerie.html" class="{{ 'active' if active == 'galerie' }}">GALERIE</a>
+      <a href="/contact.html" class="nav__cta">ESSAI&nbsp;GRATUIT</a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile">
+    <a href="/index.html" class="{{ 'active' if active == 'accueil' }}">ACCUEIL</a>
+    <a href="/histoire.html" class="{{ 'active' if active == 'histoire' }}">HISTOIRE</a>
+    <a href="/dojo.html" class="{{ 'active' if active == 'dojo' }}">LE DOJO</a>
+    <a href="/enseignant.html" class="{{ 'active' if active == 'enseignant' }}">ENSEIGNANT</a>
+    <a href="/stages.html" class="{{ 'active' if active == 'stages' }}">STAGES</a>
+    <a href="/equiper.html" class="{{ 'active' if active == 'equiper' }}">S'ÉQUIPER</a>
+    <a href="/galerie.html" class="{{ 'active' if active == 'galerie' }}">GALERIE</a>
+    <a href="/contact.html" class="nav__cta">ESSAI GRATUIT</a>
+  </div>
+</header>

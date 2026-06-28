@@ -1,0 +1,183 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Dossier où sont déposées les images téléversées (logo, photos…).
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: simple
+
+collections:
+  # ---------- RÉGLAGES DU SITE ----------
+  - name: reglages
+    label: "Réglages du site"
+    description: "Coordonnées, réseaux, horaires, tarifs, dojos partenaires."
+    files:
+      - name: site
+        label: "Coordonnées & informations générales"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Marque"
+            name: brand
+            widget: object
+            fields:
+              - { label: "Nom (ligne 1)", name: name, widget: string }
+              - { label: "Sous-titre (ligne 2)", name: sub, widget: string }
+          - label: "Coordonnées"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Email", name: email, widget: string }
+              - { label: "Téléphone (affiché)", name: phone, widget: string }
+              - { label: "Téléphone (format international, ex +33…)", name: phoneIntl, widget: string }
+              - { label: "Personne à contacter", name: person, widget: string }
+              - { label: "Adresse (rue)", name: address, widget: string }
+              - { label: "Ville", name: ville, widget: string }
+          - label: "Réseaux sociaux"
+            name: social
+            widget: object
+            fields:
+              - { label: "YouTube", name: youtube, widget: string }
+              - { label: "Facebook", name: facebook, widget: string }
+              - { label: "WhatsApp", name: whatsapp, widget: string }
+              - { label: "FFAB", name: ffab, widget: string }
+          - { label: "Phrase du bloc partenaires", name: footerLead, widget: text }
+          - { label: "Mention de bas de page", name: footerCopy, widget: string }
+          - label: "Horaires"
+            name: horaires
+            widget: list
+            fields:
+              - { label: "Libellé", name: label, widget: string }
+              - { label: "Valeur", name: value, widget: string }
+          - label: "Tarifs"
+            name: tarifs
+            widget: list
+            fields:
+              - { label: "Nom", name: name, widget: string }
+              - { label: "Montant", name: amount, widget: string }
+              - { label: "Période", name: period, widget: string }
+              - { label: "Mise en avant", name: featured, widget: boolean, default: false }
+              - { label: "Détails", name: features, widget: list, field: { label: "Ligne", name: line, widget: string } }
+          - label: "Dojos partenaires"
+            name: partners
+            widget: list
+            fields:
+              - { label: "Nom", name: name, widget: string }
+              - { label: "Lien", name: url, widget: string }
+
+  # ---------- GALERIE PHOTOS ----------
+  - name: galerie
+    label: "Galerie photos"
+    description: "Ajoutez ou retirez les photos de la galerie."
+    files:
+      - name: galerie
+        label: "Photos de la galerie"
+        file: "src/_data/galerie.json"
+        fields:
+          - label: "Photos"
+            name: photos
+            widget: list
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Légende (texte alternatif)", name: alt, widget: string, required: false }
+
+  # ---------- TEXTES DES PAGES ----------
+  - name: pages
+    label: "Textes des pages"
+    description: "Titres, accroches et paragraphes de chaque page."
+    files:
+      - name: accueil
+        label: "Accueil"
+        file: "src/_data/pages/accueil.json"
+        fields:
+          - { label: "Hero — sur-titre", name: heroEyebrow, widget: string }
+          - { label: "Hero — titre", name: heroTitle, widget: string }
+          - { label: "Hero — accroche", name: heroLead, widget: text }
+          - { label: "Esprit — sur-titre", name: espritEyebrow, widget: string }
+          - { label: "Esprit — titre", name: espritTitle, widget: string }
+          - { label: "Esprit — texte", name: espritLead, widget: text }
+          - { label: "感 Kan — libellé", name: kanLabel, widget: string }
+          - { label: "感 Kan — description", name: kanDesc, widget: text }
+          - { label: "情 Jo — libellé", name: joLabel, widget: string }
+          - { label: "情 Jo — description", name: joDesc, widget: text }
+          - { label: "Citation", name: quote, widget: string }
+          - { label: "Voie — sur-titre", name: voieEyebrow, widget: string }
+          - { label: "Voie — titre", name: voieTitle, widget: string }
+          - { label: "Voie — paragraphes", name: voieParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
+      - name: histoire
+        label: "Histoire"
+        file: "src/_data/pages/histoire.json"
+        fields:
+          - { label: "Sur-titre", name: eyebrow, widget: string }
+          - { label: "Titre", name: title, widget: string }
+          - { label: "Accroche", name: lead, widget: text }
+          - { label: "O-Senseï — sur-titre", name: osenseiEyebrow, widget: string }
+          - { label: "O-Senseï — titre", name: osenseiTitle, widget: string }
+          - { label: "O-Senseï — paragraphes", name: osenseiParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
+          - { label: "Tamura — sur-titre", name: tamuraEyebrow, widget: string }
+          - { label: "Tamura — titre", name: tamuraTitle, widget: string }
+          - { label: "Tamura — paragraphes", name: tamuraParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
+      - name: dojo
+        label: "Le Dojo"
+        file: "src/_data/pages/dojo.json"
+        fields:
+          - { label: "Sur-titre", name: eyebrow, widget: string }
+          - { label: "Titre", name: title, widget: string }
+          - { label: "Accroche", name: lead, widget: text }
+          - { label: "Comment on pratique — paragraphes", name: pratiqueParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
+      - name: enseignant
+        label: "Enseignant"
+        file: "src/_data/pages/enseignant.json"
+        fields:
+          - { label: "Sur-titre", name: eyebrow, widget: string }
+          - { label: "Titre", name: title, widget: string }
+          - { label: "Nom & grade", name: name, widget: string }
+          - { label: "Biographie — paragraphes", name: bioParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
+          - { label: "Citation", name: quote, widget: string }
+      - name: stages
+        label: "Stages"
+        file: "src/_data/pages/stages.json"
+        fields:
+          - { label: "Sur-titre", name: eyebrow, widget: string }
+          - { label: "Titre", name: title, widget: string }
+          - { label: "Accroche", name: lead, widget: text }
+          - { label: "Note", name: note, widget: text }
+          - label: "Stages"
+            name: stages
+            widget: list
+            fields:
+              - { label: "Mois", name: month, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Description", name: desc, widget: string }
+              - { label: "Info (droite)", name: meta, widget: string }
+      - name: equiper
+        label: "S'équiper"
+        file: "src/_data/pages/equiper.json"
+        fields:
+          - { label: "Sur-titre", name: eyebrow, widget: string }
+          - { label: "Titre", name: title, widget: string }
+          - { label: "Accroche", name: lead, widget: text }
+          - { label: "Note", name: note, widget: text }
+          - label: "Éléments"
+            name: items
+            widget: list
+            fields:
+              - { label: "Kanji", name: kanji, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Description", name: desc, widget: text }
+      - name: galerie_textes
+        label: "Galerie (textes)"
+        file: "src/_data/pages/galerie.json"
+        fields:
+          - { label: "Sur-titre", name: eyebrow, widget: string }
+          - { label: "Titre", name: title, widget: string }
+          - { label: "Accroche", name: lead, widget: text }
+          - { label: "Note", name: note, widget: text }
+      - name: contact
+        label: "Contact"
+        file: "src/_data/pages/contact.json"
+        fields:
+          - { label: "Sur-titre", name: eyebrow, widget: string }
+          - { label: "Titre", name: title, widget: string }
+          - { label: "Accroche", name: lead, widget: text }

@@ -1,81 +1,72 @@
-# Kanjo Aïkido Isulanu — Site vitrine
+# Kanjo Aïkido Isulanu — Site + administration
 
-Site statique multipage (HTML + CSS, zéro dépendance de build) recréant les
-maquettes du handoff. Identité « noir & or », fidèle au logo Kanjo.
+Site vitrine du dojo (Vescovato, Haute-Corse), construit avec **Eleventy**
+(générateur de site statique) et éditable via **Decap CMS** (espace `/admin`
+avec connexion). Identité « noir & or », fidèle au logo Kanjo.
 
-## Lancer le site
-
-C'est du HTML statique : ouvrez `index.html` dans un navigateur, ou servez le
-dossier pour des chemins propres :
+## Développer en local
 
 ```bash
-python3 -m http.server 8000
-# puis http://localhost:8000
+npm install
+npm start          # aperçu live sur http://localhost:8080
+# ou
+npm run build      # génère le site dans _site/
 ```
 
 ## Structure
 
 ```
 .
-├── index.html        # Accueil — hero, esprit Kanjo (感/情), citation, 3 cartes
-├── histoire.html     # O-Senseï, les 3 kanji (合·気·道), Tamura Senseï, frise
-├── dojo.html         # Pratique, horaires, adresse, adhésion (3 formules)
-├── enseignant.html   # Portrait, bio, chiffres-clés, frise parcours, citation
-├── stages.html       # Calendrier de la saison
-├── equiper.html      # Keikogi / Hakama / Armes
-├── galerie.html      # Mosaïque photos
-├── contact.html      # Coordonnées, formulaire, carte, CTA essai
-├── css/style.css     # Design system + tous les composants
-├── js/nav.js         # Menu burger (mobile)
-└── assets/           # Logos (voir assets/README.md)
+├── src/
+│   ├── *.njk              # les 8 pages (gabarits)
+│   ├── _includes/         # base.njk, nav.njk, footer.njk (partagés)
+│   ├── _data/
+│   │   ├── site.json      # coordonnées, réseaux, horaires, tarifs, partenaires
+│   │   ├── galerie.json   # photos de la galerie
+│   │   └── pages/*.json   # textes éditables de chaque page
+│   ├── css/ js/ assets/   # statiques (logo, styles, script)
+│   └── admin/             # Decap CMS (index.html + config.yml)
+├── .eleventy.js           # config du build
+├── netlify.toml           # build Netlify (publie _site/)
+└── package.json
 ```
 
-Le **header** (nav collante) et le **footer** (dojos partenaires + barre) sont
-répétés dans chaque page. La page courante est surlignée via `class="active"`
-sur le lien correspondant (et son équivalent dans le menu mobile).
+Les **textes, photos et coordonnées** vivent dans `src/_data/` : ce sont eux
+que l'éditeur modifie. Les gabarits `.njk` ne changent pas quand on édite le
+contenu.
 
-## Design tokens
+## Administration / édition (Decap CMS)
 
-Tout est centralisé dans `css/style.css` (variables `:root`) :
+Une fois le site déployé et la connexion activée, l'édition se fait sur
+`https://VOTRE-SITE/admin` :
 
-| Token | Valeur |
-|---|---|
-| Or principal | `#c9a24d` |
-| Fond | `#131009` · alt `#1a1610` · footer `#0f0c07` |
-| Titres | Cinzel · Corps Cormorant Garamond · Labels Space Grotesk |
-| Conteneur | `1180px`, padding latéral `32px` |
+- **Réglages du site** — coordonnées, réseaux, horaires, tarifs, partenaires.
+- **Galerie photos** — ajouter / retirer des photos (téléversement).
+- **Textes des pages** — titres, accroches et paragraphes de chaque page.
 
-Polices chargées via Google Fonts dans le `<head>` de chaque page.
+Les images téléversées vont dans `src/assets/uploads/`.
 
-## Contenu réel intégré
+### Mise en ligne (à faire une fois)
 
-Les textes, coordonnées, tarifs, enseignant (Sébastien De Raedt, 3ᵉ Dan),
-dojos partenaires et liens sociaux proviennent du site existant
-(sites.google.com/view/kanjoakido) et sont en place.
+Voir le guide pas à pas fourni séparément. En résumé :
+1. Déployer le dépôt sur **Netlify** (build `npm run build`, dossier `_site`).
+2. Activer **Netlify Identity** + **Git Gateway** (la connexion de l'admin).
+3. S'inviter par email, définir un mot de passe, se connecter sur `/admin`.
+
+> La branche éditée par le CMS est définie dans `src/admin/config.yml`
+> (`backend.branch`) — par défaut `main`. Elle doit correspondre à la branche
+> déployée sur Netlify.
 
 ## À compléter / fournir
-
-Il reste quelques `[ … ]` et éléments à fournir :
-
-- **Logo** : déposer le vrai logo dans `assets/` (voir `assets/README.md`).
-  Les fichiers actuels sont des **placeholders SVG** (le vrai logo est le rond
-  noir & or « KANJO AÏKIDO / ISULANU »).
-- **Horaires** : jours et heures des cours ados/adultes et enfants (`dojo.html`)
-  — non renseignés sur le site source.
-- **Photos** : galerie (`galerie.html`), portraits O-Senseï / Tamura
-  (`histoire.html`), portrait enseignant (`enseignant.html`), visuels
-  équipement (`equiper.html`).
-- **Adresse précise** : la rue du dojo (`dojo.html`, `contact.html`) — seule la
-  commune est connue : **20215 Vescovato, Haute-Corse**.
-- **Carte** : remplacer le placeholder de `contact.html` par un embed Google Maps
-  (Vescovato, Haute-Corse).
-- **Formulaire de contact** : connecter à un service d'envoi ou garder le
-  `mailto:kanjo.aikido@gmail.com`.
-- **Stages** : le calendrier est indicatif (issu de la maquette) ; ajuster avec
-  les vraies dates.
+- **Logo** : `src/assets/kanji-kanjo.svg` et `logo-square.svg` sont une
+  recréation vectorielle fidèle. Pour l'original exact, le téléverser via
+  l'admin ou le déposer dans `src/assets/`.
+- **Horaires** : à renseigner (Réglages du site).
+- **Adresse précise** : la rue du dojo à Vescovato.
+- **Photos** : galerie + portraits (O-Senseï, Tamura, enseignant).
+- **Carte** : remplacer le placeholder de `contact.njk` par un embed Google Maps.
 
 ## Ancrage géographique
 
-Le dojo est en **Corse, à Vescovato (20215, Haute-Corse)** — cohérent avec la
-marque « ISULANU / Isula di Corsica » du logo. (L'ancienne adresse « Le
-Lion-d'Angers » du site source était obsolète et a été remplacée partout.)
+Dojo en **Corse, à Vescovato (20215, Haute-Corse)** — cohérent avec la marque
+« ISULANU / Isula di Corsica ».

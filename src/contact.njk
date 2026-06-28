@@ -1,0 +1,76 @@
+---
+layout: base.njk
+active: contact
+permalink: /contact.html
+title_tag: "Contact & Essai gratuit — Kanjo Aïkido Isulanu"
+description: "Réservez votre cours d'essai gratuit. Coordonnées, accès et formulaire de contact du dojo Kanjo Aïkido Isulanu à Vescovato."
+---
+{% set p = pages.contact %}
+<!-- ===== HEADER ===== -->
+<section class="section section--tight">
+  <div class="section__inner" style="text-align:center;">
+    <div class="eyebrow">{{ p.eyebrow }}</div>
+    <h1 class="hero__title" style="font-size:clamp(34px,5vw,58px);">{{ p.title }}</h1>
+    <p class="section-lead" style="max-width:620px; margin:0 auto;">{{ p.lead }}</p>
+  </div>
+</section>
+
+<!-- ===== COORDONNÉES + FORM ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="contact-grid">
+      <div>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-list__label">Email</div>
+            <div class="contact-list__value"><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
+          </li>
+          <li>
+            <div class="contact-list__label">Téléphone</div>
+            <div class="contact-list__value"><a href="tel:{{ site.contact.phoneIntl }}">{{ site.contact.phone }}</a> · {{ site.contact.person }}</div>
+          </li>
+          <li>
+            <div class="contact-list__label">Adresse</div>
+            <div class="contact-list__value">Kanjo Aïkido<br>{{ site.contact.address }}<br>{{ site.contact.ville }}</div>
+          </li>
+          <li>
+            <div class="contact-list__label">Réseaux</div>
+            <div class="contact-list__value" style="font-size:15px;">
+              <a href="{{ site.social.youtube }}">YouTube</a> ·
+              <a href="{{ site.social.facebook }}">Facebook</a> ·
+              <a href="{{ site.social.whatsapp }}">WhatsApp</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <form class="contact-form" action="mailto:{{ site.contact.email }}" method="post" enctype="text/plain">
+          <div>
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" required placeholder="Votre nom">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="vous@exemple.fr">
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Je souhaite réserver un cours d'essai…"></textarea>
+          </div>
+          <button class="btn-gold" type="submit">ENVOYER</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CARTE ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section-head" style="margin-bottom:36px;">
+      <div class="eyebrow">道場 — ACCÈS</div>
+      <h2 class="section-title">Nous trouver</h2>
+    </div>
+    <div class="map-embed placeholder-media">[ carte · embed Google Maps — Vescovato ]</div>
+  </div>
+</section>

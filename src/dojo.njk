@@ -1,0 +1,121 @@
+---
+layout: base.njk
+active: dojo
+permalink: /dojo.html
+title_tag: "Le Dojo — Kanjo Aïkido Isulanu"
+description: "La pratique (tai-jutsu, bokken, jō), les horaires, l'adresse à Vescovato et les formules d'adhésion du dojo Kanjo Aïkido Isulanu."
+---
+{% set p = pages.dojo %}
+<!-- ===== HEADER ===== -->
+<section class="section section--tight">
+  <div class="kanji-watermark" style="font-size:200px; left:-20px; top:0;">道場</div>
+  <div class="section__inner" style="text-align:center; position:relative; z-index:1;">
+    <div class="eyebrow">{{ p.eyebrow }}</div>
+    <h1 class="hero__title" style="font-size:clamp(34px,5vw,58px);">{{ p.title }}</h1>
+    <p class="section-lead" style="max-width:620px; margin:0 auto;">{{ p.lead }}</p>
+  </div>
+</section>
+
+<!-- ===== PRATIQUE ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">稽古 — LA PRATIQUE</div>
+      <h2 class="section-title">Trois dimensions, un même art</h2>
+    </div>
+    <div class="cards">
+      <div class="card" style="cursor:default;">
+        <div class="card__kanji">体術</div>
+        <h3 class="card__title">Tai-jutsu</h3>
+        <p class="card__desc">Le travail à mains nues : déplacements, projections et immobilisations, dans la fluidité.</p>
+      </div>
+      <div class="card" style="cursor:default;">
+        <div class="card__kanji">木剣</div>
+        <h3 class="card__title">Bokken</h3>
+        <p class="card__desc">Le sabre de bois : posture, coupe et distance, racine de nombreux mouvements.</p>
+      </div>
+      <div class="card" style="cursor:default;">
+        <div class="card__kanji">杖</div>
+        <h3 class="card__title">Jō</h3>
+        <p class="card__desc">Le bâton : enchaînements et travail de la ligne, pour affiner le centre et le timing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMMENT ON PRATIQUE ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="two-col">
+      <div class="prose">
+        <div class="eyebrow">稽古 — COMMENT ON PRATIQUE</div>
+        <h2 class="section-title" style="text-align:left;">Avancer ensemble, à son rythme</h2>
+        {%- for para in p.pratiqueParas %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
+      <div class="info-box">
+        <h3>Ta première année</h3>
+        <div class="info-row"><span class="info-row__k">Un axe stable</span><span class="info-row__v">déplacements souples</span></div>
+        <div class="info-row"><span class="info-row__k">Des ukemi sereins</span><span class="info-row__v">sans appréhension</span></div>
+        <div class="info-row"><span class="info-row__k">Les formes classiques</span><span class="info-row__v">ikkyo, shihonage…</span></div>
+        <div class="info-row"><span class="info-row__k">Les repères aux armes</span><span class="info-row__v">garde, coupes, rythme</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HORAIRES & ADRESSE ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Horaires</h3>
+        {%- for h in site.horaires %}
+        <div class="info-row"><span class="info-row__k">{{ h.label }}</span><span class="info-row__v">{{ h.value }}</span></div>
+        {%- endfor %}
+      </div>
+      <div class="info-box">
+        <h3>Adresse</h3>
+        <div class="info-row"><span class="info-row__k">Dojo</span><span class="info-row__v">Kanjo Aïkido</span></div>
+        <div class="info-row"><span class="info-row__k">Adresse</span><span class="info-row__v">{{ site.contact.address }}</span></div>
+        <div class="info-row"><span class="info-row__k">Ville</span><span class="info-row__v">{{ site.contact.ville }}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ADHÉSION ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">入会 — ADHÉSION</div>
+      <h2 class="section-title">Cotisation annuelle</h2>
+      <p class="section-lead">Deux cours d'essai offerts. Paiement possible en trois fois sur demande.</p>
+    </div>
+    <div class="pricing">
+      {%- for t in site.tarifs %}
+      <div class="price-card{{ ' price-card--featured' if t.featured }}">
+        <div class="price-card__name">{{ t.name }}</div>
+        <div class="price-card__amount">{{ t.amount }}</div>
+        <div class="price-card__period">{{ t.period }}</div>
+        <ul class="price-card__list">
+          {%- for f in t.features %}
+          <li>{{ f }}</li>
+          {%- endfor %}
+        </ul>
+        <a class="{{ 'btn-gold' if t.featured else 'btn-outline' }}" href="/contact.html">S'INSCRIRE</a>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="note-italic">Un certificat médical de non contre-indication à la pratique de l'Aïkido est requis pour l'inscription.</p>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="section__inner">
+    <h2 class="cta-band__title">Le premier pas est gratuit.</h2>
+    <a class="btn-gold" href="/contact.html">RÉSERVER MON ESSAI</a>
+  </div>
+</section>

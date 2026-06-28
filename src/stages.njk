@@ -1,0 +1,38 @@
+---
+layout: base.njk
+active: stages
+permalink: /stages.html
+title_tag: "Stages & Calendrier — Kanjo Aïkido Isulanu"
+description: "Calendrier des stages de la saison 2026–2027 du dojo Kanjo Aïkido Isulanu."
+---
+{% set p = pages.stages %}
+<!-- ===== HEADER ===== -->
+<section class="section section--tight">
+  <div class="section__inner" style="text-align:center;">
+    <div class="eyebrow">{{ p.eyebrow }}</div>
+    <h1 class="hero__title" style="font-size:clamp(32px,5vw,54px);">{{ p.title }}</h1>
+    <p class="section-lead" style="max-width:600px; margin:0 auto;">{{ p.lead }}</p>
+  </div>
+</section>
+
+<!-- ===== CALENDRIER ===== -->
+<section class="section" style="padding-bottom:50px;">
+  <div class="section__inner" style="padding-top:30px;">
+    <div class="timeline">
+      {%- for s in p.stages %}
+      <div class="timeline__row">
+        <div class="timeline__year">{{ s.month }}</div>
+        <div>
+          <div class="timeline__title">{{ s.title }}</div>
+          <div class="timeline__desc">{{ s.desc | safe }}</div>
+        </div>
+        <div class="timeline__meta">{{ s.meta }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="note-italic">{{ p.note }}</p>
+    <div style="text-align:center; margin-top:40px;">
+      <a class="btn-outline" href="https://stages-aikido.fr/" target="_blank" rel="noopener">VOIR LES STAGES PARTOUT EN FRANCE</a>
+    </div>
+  </div>
+</section>

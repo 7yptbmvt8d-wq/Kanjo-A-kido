@@ -1,0 +1,126 @@
+---
+layout: base.njk
+active: enseignant
+permalink: /enseignant.html
+title_tag: "L'enseignant — Kanjo Aïkido Isulanu"
+description: "Le parcours de Sébastien De Raedt, 3ᵉ Dan Aïkikaï de Tokyo, fondateur du dojo Kanjo Aïkido à Vescovato."
+---
+{% set p = pages.enseignant %}
+<!-- ===== PORTRAIT + BIO ===== -->
+<section class="section section--tight">
+  <div class="section__inner">
+    <div class="two-col">
+      <div class="placeholder-media" style="height:520px;">[ portrait · enseignant ]</div>
+      <div class="prose">
+        <div class="eyebrow">{{ p.eyebrow }}</div>
+        <h1 class="section-title" style="text-align:left; font-size:clamp(30px,4.5vw,48px);">{{ p.title }}</h1>
+        <p style="font-size:20px; color:var(--text-strong);"><strong>{{ p.name }}</strong></p>
+        {%- for para in p.bioParas %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHIFFRES-CLÉS ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__num">3<sup>e</sup></div>
+        <div class="stat__label">Dan · Aïkikaï de Tokyo</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">20<sup>+</sup></div>
+        <div class="stat__label">Ans de pratique</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">BF</div>
+        <div class="stat__label">Brevet Fédéral d'Enseignement</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">FFAB</div>
+        <div class="stat__label">Affiliation fédérale</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FRISE PARCOURS ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">道 — LE PARCOURS</div>
+      <h2 class="section-title">Étapes d'une pratique</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline__row">
+        <div class="timeline__year">Débuts</div>
+        <div>
+          <div class="timeline__title">Rognac · Bouches-du-Rhône</div>
+          <div class="timeline__desc">Avec Christian Careddu (5ᵉ Dan), jusqu'au 1ᵉʳ Kyu.</div>
+        </div>
+        <div class="timeline__meta">CONTINENT</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">~20 ans</div>
+        <div>
+          <div class="timeline__title">Loin des tatamis</div>
+          <div class="timeline__desc">Une longue parenthèse, avant le retour à la pratique.</div>
+        </div>
+        <div class="timeline__meta">—</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">Reprise</div>
+        <div>
+          <div class="timeline__title">Costa Verde Aïkido · Corse</div>
+          <div class="timeline__desc">Avec Jean-Charles Lanusse (4ᵉ Dan).</div>
+        </div>
+        <div class="timeline__meta">CORSE</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">Grades</div>
+        <div>
+          <div class="timeline__title">Shodan &amp; enseignement</div>
+          <div class="timeline__desc">Shodan, Brevet Fédéral d'Enseignement, puis assistanat.</div>
+        </div>
+        <div class="timeline__meta">FFAB</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">Confirm.</div>
+        <div>
+          <div class="timeline__title">3ᵉ Dan CSDGE &amp; 3ᵉ Dan Aïkikaï</div>
+          <div class="timeline__desc">Reconnaissance fédérale et de l'Aïkikaï de Tokyo.</div>
+        </div>
+        <div class="timeline__meta">CSDGE · AÏKIKAÏ</div>
+      </div>
+      <div class="timeline__row">
+        <div class="timeline__year">Auj.</div>
+        <div>
+          <div class="timeline__title">Fondation du dojo</div>
+          <div class="timeline__desc">Création de Kanjo Aïkido — transmettre à mon tour.</div>
+        </div>
+        <div class="timeline__meta">VESCOVATO · CORSE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CITATION ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="quote">
+      <p class="quote__text">{{ p.quote }}</p>
+      <div class="quote__cite">— L'ENSEIGNANT</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section">
+  <div class="section__inner" style="text-align:center;">
+    <h2 class="cta-band__title">Venez pratiquer avec nous.</h2>
+    <a class="btn-gold" href="/contact.html">ESSAI GRATUIT</a>
+  </div>
+</section>
