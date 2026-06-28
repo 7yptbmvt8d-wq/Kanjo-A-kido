@@ -19,6 +19,7 @@ collections:
         label: "Coordonnées & informations générales"
         file: "src/_data/site.json"
         fields:
+          - { label: "Logo (image)", name: logo, widget: image, required: false, hint: "Laisser vide pour garder le logo doré par défaut." }
           - label: "Marque"
             name: brand
             widget: object
@@ -113,6 +114,8 @@ collections:
           - { label: "Sur-titre", name: eyebrow, widget: string }
           - { label: "Titre", name: title, widget: string }
           - { label: "Accroche", name: lead, widget: text }
+          - { label: "Photo — O-Senseï", name: osenseiPhoto, widget: image, required: false }
+          - { label: "Photo — Tamura Senseï", name: tamuraPhoto, widget: image, required: false }
           - { label: "O-Senseï — sur-titre", name: osenseiEyebrow, widget: string }
           - { label: "O-Senseï — titre", name: osenseiTitle, widget: string }
           - { label: "O-Senseï — paragraphes", name: osenseiParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
@@ -131,6 +134,7 @@ collections:
         label: "Enseignant"
         file: "src/_data/pages/enseignant.json"
         fields:
+          - { label: "Photo de l'enseignant", name: photo, widget: image, required: false }
           - { label: "Sur-titre", name: eyebrow, widget: string }
           - { label: "Titre", name: title, widget: string }
           - { label: "Nom & grade", name: name, widget: string }

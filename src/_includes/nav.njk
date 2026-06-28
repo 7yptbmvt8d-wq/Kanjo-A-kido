@@ -1,7 +1,7 @@
 <header class="nav">
   <div class="nav__inner">
     <a class="nav__logo" href="/index.html">
-      <img src="/assets/kanji-kanjo.svg" alt="Kanjo Aïkido">
+      <img src="{{ site.logo or '/assets/kanji-kanjo.svg' }}" alt="Kanjo Aïkido">
       <span class="nav__logo-text">
         <span class="nav__logo-name">{{ site.brand.name | replace(" ", "&nbsp;") | safe }}</span>
         <span class="nav__logo-sub">{{ site.brand.sub }}</span>

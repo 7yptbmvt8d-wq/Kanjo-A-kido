@@ -10,7 +10,11 @@ description: "Le parcours de Sébastien De Raedt, 3ᵉ Dan Aïkikaï de Tokyo, f
 <section class="section section--tight">
   <div class="section__inner">
     <div class="two-col">
+      {% if p.photo %}
+      <img src="{{ p.photo }}" alt="Sébastien De Raedt" style="width:100%; height:520px; object-fit:cover; border:1px solid var(--gold-18);">
+      {% else %}
       <div class="placeholder-media" style="height:520px;">[ portrait · enseignant ]</div>
+      {% endif %}
       <div class="prose">
         <div class="eyebrow">{{ p.eyebrow }}</div>
         <h1 class="section-title" style="text-align:left; font-size:clamp(30px,4.5vw,48px);">{{ p.title }}</h1>

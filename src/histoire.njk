@@ -20,7 +20,11 @@ description: "Aux sources de l'Aïkido : O-Senseï Morihei Ueshiba, les trois ka
 <section class="section section--alt section--divider">
   <div class="section__inner">
     <div class="two-col">
+      {% if p.osenseiPhoto %}
+      <img src="{{ p.osenseiPhoto }}" alt="O-Senseï Morihei Ueshiba" style="width:100%; height:440px; object-fit:cover; border:1px solid var(--gold-18);">
+      {% else %}
       <div class="placeholder-media" style="height:440px;">[ portrait · O-Senseï ]</div>
+      {% endif %}
       <div class="prose">
         <div class="eyebrow">{{ p.osenseiEyebrow }}</div>
         <h2 class="section-title" style="text-align:left;">{{ p.osenseiTitle }}</h2>
@@ -71,7 +75,11 @@ description: "Aux sources de l'Aïkido : O-Senseï Morihei Ueshiba, les trois ka
         <p>{{ para | safe }}</p>
         {%- endfor %}
       </div>
+      {% if p.tamuraPhoto %}
+      <img src="{{ p.tamuraPhoto }}" alt="Nobuyoshi Tamura Senseï" style="width:100%; height:440px; object-fit:cover; border:1px solid var(--gold-18);">
+      {% else %}
       <div class="placeholder-media" style="height:440px;">[ portrait · Tamura Senseï ]</div>
+      {% endif %}
     </div>
   </div>
 </section>
