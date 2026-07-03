@@ -5,7 +5,7 @@
     <p class="footer-partners__body">{{ site.footerLead }}</p>
     <div class="footer-partners__list">
       {%- for p in site.partners %}
-      <a href="{{ p.url }}">{{ p.name }}</a>
+      <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>
       {%- if not loop.last %}
       <span class="footer-partners__sep">·</span>
       {%- endif %}
@@ -27,10 +27,10 @@
       {% endif %}
     </a>
     <div class="footer-bar__links">
-      <a href="{{ site.social.youtube }}">YOUTUBE</a>
-      <a href="{{ site.social.facebook }}">FACEBOOK</a>
-      <a href="{{ site.social.whatsapp }}">WHATSAPP</a>
-      <a href="{{ site.social.ffab }}">FFAB</a>
+      <a href="{{ site.social.youtube }}" target="_blank" rel="noopener">YOUTUBE</a>
+      <a href="{{ site.social.facebook }}" target="_blank" rel="noopener">FACEBOOK</a>
+      <a href="{{ site.social.whatsapp }}" target="_blank" rel="noopener">WHATSAPP</a>
+      <a href="{{ site.social.ffab }}" target="_blank" rel="noopener">FFAB</a>
     </div>
     <div class="footer-bar__copy">{{ site.footerCopy }}</div>
   </div>

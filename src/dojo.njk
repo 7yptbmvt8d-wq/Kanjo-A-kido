@@ -104,7 +104,7 @@ description: "La pratique (tai-jutsu, bokken, jō), les horaires, l'adresse à V
           <li>{{ f }}</li>
           {%- endfor %}
         </ul>
-        <a class="{{ 'btn-gold' if t.featured else 'btn-outline' }}" href="/contact.html">S'INSCRIRE</a>
+        <a class="{{ 'btn-gold' if t.featured else 'btn-outline' }}" href="{{ site.helloasso or '/contact.html' }}"{% if site.helloasso %} target="_blank" rel="noopener"{% endif %}>S'INSCRIRE</a>
       </div>
       {%- endfor %}
     </div>
@@ -115,7 +115,7 @@ description: "La pratique (tai-jutsu, bokken, jō), les horaires, l'adresse à V
 <!-- ===== CTA ===== -->
 <section class="cta-band">
   <div class="section__inner">
-    <h2 class="cta-band__title">Le premier pas est gratuit.</h2>
-    <a class="btn-gold" href="/contact.html">INSCRIVEZ-VOUS</a>
+    <h2 class="cta-band__title">Prêt à nous rejoindre ?</h2>
+    <a class="btn-gold" href="{{ site.helloasso or '/contact.html' }}"{% if site.helloasso %} target="_blank" rel="noopener"{% endif %}>S'INSCRIRE EN LIGNE</a>
   </div>
 </section>

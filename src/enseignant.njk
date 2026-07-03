@@ -27,6 +27,28 @@ description: "Le parcours de Sébastien De Raedt, 3ᵉ Dan Aïkikaï de Tokyo, f
   </div>
 </section>
 
+{% if p.teacher2Show %}
+<!-- ===== SECOND ENSEIGNANT ===== -->
+<section class="section section--divider">
+  <div class="section__inner">
+    <div class="two-col">
+      <div class="prose">
+        <div class="eyebrow">{{ p.teacher2Eyebrow }}</div>
+        <h2 class="section-title" style="text-align:left;">{{ p.teacher2Name }}</h2>
+        {%- for para in p.teacher2Bio %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
+      {% if p.teacher2Photo %}
+      <img src="{{ p.teacher2Photo }}" alt="Jean-Charles Lanusse" style="display:block; width:100%; max-width:440px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
+      {% else %}
+      <div class="placeholder-media" style="height:520px;">[ portrait · second enseignant ]</div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- ===== CHIFFRES-CLÉS ===== -->
 <section class="section section--alt section--divider">
   <div class="section__inner">
