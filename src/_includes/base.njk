@@ -5,7 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title_tag }}</title>
 <meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#131009">
+<!-- Open Graph / réseaux sociaux -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kanjo Aïkido Isulanu">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="{{ title_tag }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ site.logo or '/assets/logo-square.svg' }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title_tag }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.logo or '/assets/logo-square.svg' }}">
 <link rel="icon" href="/assets/logo-square.svg" type="image/svg+xml">
+<!-- Données structurées (dojo local) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Kanjo Aïkido Isulanu",
+  "description": "Dojo d'Aïkido à Vescovato (Haute-Corse), ouvert à toutes et à tous, sans compétition.",
+  "url": "{{ site.url }}",
+  "image": "{{ site.url }}{{ site.logo or '/assets/logo-square.svg' }}",
+  "telephone": "{{ site.contact.phoneIntl }}",
+  "email": "{{ site.contact.email }}",
+  "sport": "Aïkido",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vescovato",
+    "postalCode": "20215",
+    "addressRegion": "Haute-Corse",
+    "addressCountry": "FR"
+  },
+  "sameAs": [
+    "{{ site.social.youtube }}",
+    "{{ site.social.facebook }}"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
