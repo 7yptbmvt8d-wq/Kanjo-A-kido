@@ -756,6 +756,18 @@ img { display: block; max-width: 100%; }
 .gallery__item { width: 100%; height: 100%; }
 .gallery__item--tall { grid-row: span 2; }
 .gallery__item--wide { grid-column: span 2; }
+.gallery-season { margin-bottom: 60px; }
+.gallery-season:last-child { margin-bottom: 0; }
+.gallery-season__title {
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: clamp(20px, 3vw, 28px);
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gold-18);
+}
 
 /* ===== CONTACT ===== */
 .contact-grid {

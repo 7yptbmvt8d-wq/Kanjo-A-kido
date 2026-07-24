@@ -78,12 +78,19 @@ collections:
         label: "Photos de la galerie"
         file: "src/_data/galerie.json"
         fields:
-          - label: "Photos"
-            name: photos
+          - label: "Saisons"
+            name: seasons
+            label_singular: "Saison"
             widget: list
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Image", name: image, widget: image }
-              - { label: "Légende (texte alternatif)", name: alt, widget: string, required: false }
+              - { label: "Titre de la saison", name: title, widget: string, hint: "Ex. : Saison 2026 – 2027" }
+              - label: "Photos"
+                name: photos
+                widget: list
+                fields:
+                  - { label: "Image", name: image, widget: image }
+                  - { label: "Légende (texte alternatif)", name: alt, widget: string, required: false }
 
   # ---------- TEXTES DES PAGES ----------
   - name: pages

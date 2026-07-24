@@ -15,23 +15,42 @@ description: "Images de la pratique au dojo Kanjo Aïkido Isulanu : tatamis, arm
   </div>
 </section>
 
-<!-- ===== MOSAÏQUE ===== -->
+<!-- ===== MOSAÏQUE PAR SAISON ===== -->
 <section class="section" style="padding-top:20px;">
   <div class="section__inner" style="padding-top:30px;">
-    <div class="gallery">
-      {%- if galerie.photos and galerie.photos.length %}
-        {%- for photo in galerie.photos %}
-        <div class="gallery__item">
-          <img src="{{ photo.image }}" alt="{{ photo.alt }}" style="width:100%; height:100%; object-fit:cover;">
+    {%- set hasPhotos = false %}
+    {%- for season in galerie.seasons %}
+      {%- if season.photos and season.photos.length %}{% set hasPhotos = true %}{% endif %}
+    {%- endfor %}
+
+    {%- if galerie.seasons and galerie.seasons.length %}
+      {%- for season in galerie.seasons %}
+      <div class="gallery-season">
+        <h2 class="gallery-season__title">{{ season.title }}</h2>
+        <div class="gallery">
+          {%- if season.photos and season.photos.length %}
+            {%- for photo in season.photos %}
+            <div class="gallery__item">
+              <img src="{{ photo.image }}" alt="{{ photo.alt }}" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            {%- endfor %}
+          {%- else %}
+            {%- for i in range(0, 3) %}
+            <div class="gallery__item placeholder-media">[ photo ]</div>
+            {%- endfor %}
+          {%- endif %}
         </div>
-        {%- endfor %}
-      {%- else %}
-        {%- for i in range(0, 9) %}
+      </div>
+      {%- endfor %}
+    {%- else %}
+      <div class="gallery">
+        {%- for i in range(0, 6) %}
         <div class="gallery__item placeholder-media">[ photo ]</div>
         {%- endfor %}
-      {%- endif %}
-    </div>
-    {%- if not (galerie.photos and galerie.photos.length) %}
+      </div>
+    {%- endif %}
+
+    {%- if not hasPhotos %}
     <p class="note-italic">{{ p.note }}</p>
     {%- endif %}
   </div>
