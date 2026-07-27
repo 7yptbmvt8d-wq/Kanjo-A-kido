@@ -2,11 +2,20 @@
   "photo": "/assets/uploads/enseignant.jpg",
   "eyebrow": "先生 — L'ENSEIGNANT",
   "title": "Un chemin, une transmission",
-  "name": "Sébastien De Raedt — 1 Dan (Shodan), Aïkikaï de Tokyo.",
+  "name": "Sébastien De Raedt — 1ᵉʳ Dan (Shodan), Aïkikaï de Tokyo.",
   "bioParas": [
-    "Je pratique l'Aïkido depuis plus de <strong>vingt ans</strong>. J'ai commencé à <strong>Rognac</strong> (Bouches-du-Rhône), auprès de <strong>Christian Careddu</strong> (5ᵉ Dan), jusqu'au <strong>1ᵉʳ Kyu</strong>.",
-    "Après une interruption d'environ vingt ans, liée aux études et à la vie professionnelle, j'ai repris la pratique en Corse. Au <strong>Costa Verde Aïkido</strong>, sous la direction de <strong>Jean-Charles Lanusse</strong> (4ᵉ Dan), j'ai obtenu mon <strong>Shodan</strong> (1ᵉʳ Dan) et suivi la formation du <strong>Brevet Fédéral d'Enseignement</strong>.",
-    "Après plusieurs années d'assistanat, j'ai obtenu le <strong>1 Dan CSDGE</strong> puis le <strong>1 Dan Aïkikaï de Tokyo</strong>. De ce parcours est né le dojo <strong>Kanjo Aïkido</strong>, à Vescovato, en Corse : un environnement accueillant où chacun progresse à son rythme, débutant comme confirmé."
+    "L'Aïkido fait partie de ma vie depuis plus de <strong>vingt ans</strong>. J'ai commencé à <strong>Rognac</strong> (Bouches-du-Rhône), formé par <strong>Christian Careddu</strong> (5ᵉ Dan), un enseignant exigeant et passionné, jusqu'à l'obtention de mon <strong>1ᵉʳ Kyu</strong>. Puis la vie m'a éloigné des tatamis pendant près de vingt ans.",
+    "C'est en arrivant en <strong>Corse</strong> que la flamme s'est ravivée. Au <strong>Costa Verde Aïkido</strong>, sous la direction de <strong>Jean-Charles Lanusse</strong> (4ᵉ Dan), j'ai passé mon <strong>Shodan (1ᵉʳ Dan)</strong> et suivi la formation du <strong>Brevet Fédéral d'Enseignement</strong>, avant d'assister plusieurs années à son enseignement.",
+    "De ce parcours est né <strong>Kanjo Aïkido Isulanu</strong>, à <strong>Vescovato</strong> : un lieu à mon image, accueillant, où chacun — débutant ou confirmé — avance à son rythme. Car l'Aïkido, pour moi, est bien plus qu'un art martial : une voie de développement personnel et une philosophie de vie."
   ],
-  "quote": "« On ne transmet pas une technique : on transmet une attention. »"
+  "quote": "« On ne transmet pas une technique : on transmet une attention. »",
+  "teacher2Show": true,
+  "teacher2Photo": "",
+  "teacher2Eyebrow": "先生 — SECOND ENSEIGNANT",
+  "teacher2Name": "Jean-Charles Lanusse — 4ᵉ Dan CSDGE.",
+  "teacher2Bio": [
+    "<strong>Jean-Charles Lanusse</strong>, né en 1964 dans le sud-ouest de la France, découvre l'Aïkido en 1988 à L'Arbresle, près de Lyon. Formé notamment par René Lebourdais et Hubert Audra, il est profondément marqué par Alain Peyrache et surtout par <strong>Tamura Senseï</strong> — la recherche, la présence et la sincérité.",
+    "Enseignant dès 1995 en zones d'éducation prioritaire, il développe une approche fondée sur l'accessibilité et la progression de chacun. Installé à Bastia en 1998, il poursuit sa pratique auprès d'Antoine Belgodère (aujourd'hui 6ᵉ Dan) et suit les stages d'été de Tamura Senseï jusqu'à la disparition de ce dernier.",
+    "En 2004, il fonde le <strong>Costa Verde Aïkido</strong>. <strong>4ᵉ Dan</strong>, il défend une rigueur technique sans rigidité et un progrès régulier, pour faire du dojo « un lieu de transmission, de respect, d'engagement et de partage »."
+  ]
 }

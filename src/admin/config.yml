@@ -20,6 +20,7 @@ collections:
         file: "src/_data/site.json"
         fields:
           - { label: "Logo (image)", name: logo, widget: image, required: false, hint: "Laisser vide pour garder le logo doré par défaut." }
+          - { label: "Lien HelloAsso (inscription)", name: helloasso, widget: string, required: false, hint: "URL de la page d'inscription HelloAsso. Vide = les boutons renvoient vers Contact." }
           - label: "Marque"
             name: brand
             widget: object
@@ -77,12 +78,19 @@ collections:
         label: "Photos de la galerie"
         file: "src/_data/galerie.json"
         fields:
-          - label: "Photos"
-            name: photos
+          - label: "Saisons"
+            name: seasons
+            label_singular: "Saison"
             widget: list
+            summary: "{{fields.title}}"
             fields:
-              - { label: "Image", name: image, widget: image }
-              - { label: "Légende (texte alternatif)", name: alt, widget: string, required: false }
+              - { label: "Titre de la saison", name: title, widget: string, hint: "Ex. : Saison 2026 – 2027" }
+              - label: "Photos"
+                name: photos
+                widget: list
+                fields:
+                  - { label: "Image", name: image, widget: image }
+                  - { label: "Légende (texte alternatif)", name: alt, widget: string, required: false }
 
   # ---------- TEXTES DES PAGES ----------
   - name: pages
@@ -140,6 +148,11 @@ collections:
           - { label: "Nom & grade", name: name, widget: string }
           - { label: "Biographie — paragraphes", name: bioParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
           - { label: "Citation", name: quote, widget: string }
+          - { label: "Afficher le second enseignant", name: teacher2Show, widget: boolean, default: true }
+          - { label: "Second enseignant — photo", name: teacher2Photo, widget: image, required: false }
+          - { label: "Second enseignant — sur-titre", name: teacher2Eyebrow, widget: string, required: false }
+          - { label: "Second enseignant — nom & grade", name: teacher2Name, widget: string, required: false }
+          - { label: "Second enseignant — biographie", name: teacher2Bio, widget: list, required: false, field: { label: "Paragraphe", name: p, widget: text } }
       - name: stages
         label: "Stages"
         file: "src/_data/pages/stages.json"
