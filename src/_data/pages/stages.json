@@ -5,22 +5,39 @@
   "note": "Calendrier indicatif — dates définitives communiquées au dojo et sur la chaîne WhatsApp.",
   "stages": [
     {
-      "month": "OCT.",
+      "date": "2 SEPT",
+      "title": "Ouverture du dojo",
+      "desc": "Première rentrée du Kanjo Aïkido Isulanu à Vescovato. Cours Jeunes le mercredi, Séniors grands débutants le vendredi.",
+      "meta": "",
+      "type": "featured"
+    },
+    {
+      "date": "OCT.",
       "title": "Stage de rentrée",
       "desc": "Reprise de la saison, ouvert à tous les niveaux.",
-      "meta": "DOJO · [ VILLE ]"
+      "meta": "DOJO · [ VILLE ]",
+      "type": ""
     },
     {
-      "month": "DÉC.",
+      "date": "DÉC.",
       "title": "Stage inter-dojos",
       "desc": "Rencontre avec les dojos partenaires de l'île.",
-      "meta": "À CONFIRMER"
+      "meta": "À CONFIRMER",
+      "type": ""
     },
     {
-      "month": "JANV.",
+      "date": "JANV.",
       "title": "Stage technique — armes",
       "desc": "Bokken & jō, travail des déplacements et de la distance.",
-      "meta": "À CONFIRMER"
+      "meta": "À CONFIRMER",
+      "type": ""
+    },
+    {
+      "date": "JUIN",
+      "title": "Clôture de saison",
+      "desc": "",
+      "meta": "",
+      "type": "end"
     }
   ]
 }
