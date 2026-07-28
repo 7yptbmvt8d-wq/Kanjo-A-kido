@@ -8,6 +8,7 @@ eleventyExcludeFromCollections: true
 {%- if '/admin' not in item.url %}
   <url>
     <loc>{{ site.url }}{{ item.url }}</loc>
+    <lastmod>{{ build }}</lastmod>
   </url>
 {%- endif %}
 {%- endfor %}

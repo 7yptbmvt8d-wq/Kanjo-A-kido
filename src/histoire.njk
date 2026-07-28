@@ -2,8 +2,8 @@
 layout: base.njk
 active: histoire
 permalink: /histoire.html
-title_tag: "Histoire de l'Aïkido — Kanjo Aïkido Isulanu"
-description: "Aux sources de l'Aïkido : O-Senseï Morihei Ueshiba, les trois kanji AI · KI · DŌ, et la lignée de Nobuyoshi Tamura en France."
+title_tag: "Histoire de l'Aïkido — des origines à Kanjo Isulanu"
+description: "Découvrez l'histoire de l'Aïkido : O-Senseï Morihei Ueshiba, les 3 kanji AI·KI·DŌ et la lignée de Tamura, jusqu'au dojo Kanjo Aïkido à Vescovato."
 ---
 {% set p = pages.histoire %}
 <!-- ===== HEADER ===== -->
@@ -21,7 +21,7 @@ description: "Aux sources de l'Aïkido : O-Senseï Morihei Ueshiba, les trois ka
   <div class="section__inner">
     <div class="two-col">
       {% if p.osenseiPhoto %}
-      <img src="{{ p.osenseiPhoto }}" alt="O-Senseï Morihei Ueshiba" style="display:block; width:100%; max-width:420px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
+      <img loading="lazy" src="{{ p.osenseiPhoto }}" alt="O-Senseï Morihei Ueshiba" style="display:block; width:100%; max-width:420px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
       {% else %}
       <div class="placeholder-media" style="height:440px;">[ portrait · O-Senseï ]</div>
       {% endif %}
@@ -76,7 +76,7 @@ description: "Aux sources de l'Aïkido : O-Senseï Morihei Ueshiba, les trois ka
         {%- endfor %}
       </div>
       {% if p.tamuraPhoto %}
-      <img src="{{ p.tamuraPhoto }}" alt="Nobuyoshi Tamura Senseï" style="display:block; width:100%; max-width:420px; aspect-ratio:7/10; object-fit:cover; object-position:center; margin:0 auto; border:1px solid var(--gold-18);">
+      <img loading="lazy" src="{{ p.tamuraPhoto }}" alt="Nobuyoshi Tamura Senseï" style="display:block; width:100%; max-width:420px; aspect-ratio:7/10; object-fit:cover; object-position:center; margin:0 auto; border:1px solid var(--gold-18);">
       {% else %}
       <div class="placeholder-media" style="height:440px;">[ portrait · Tamura Senseï ]</div>
       {% endif %}

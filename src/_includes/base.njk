@@ -33,16 +33,26 @@
   "telephone": "{{ site.contact.phoneIntl }}",
   "email": "{{ site.contact.email }}",
   "sport": "Aïkido",
+  "logo": "{{ site.url }}{{ site.logo or '/assets/logo-square.svg' }}",
+  "areaServed": ["Vescovato", "Castagniccia-Casinca", "Haute-Corse", "Corse"],
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "COSEC de Vescovato",
     "addressLocality": "Vescovato",
     "postalCode": "20215",
     "addressRegion": "Haute-Corse",
     "addressCountry": "FR"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.5063931,
+    "longitude": 9.466556
+  },
+  "hasMap": "https://www.google.com/maps/place/Kanjo+A%C3%AFkido+Isulanu/@42.5063931,9.466556,16z",
   "sameAs": [
     "{{ site.social.youtube }}",
-    "{{ site.social.facebook }}"
+    "{{ site.social.facebook }}",
+    "{{ site.social.ffab }}"
   ]
 }
 </script>

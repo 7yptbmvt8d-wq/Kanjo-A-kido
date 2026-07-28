@@ -2,8 +2,8 @@
 layout: base.njk
 active: dojo
 permalink: /dojo.html
-title_tag: "Le Dojo — Kanjo Aïkido Isulanu"
-description: "La pratique (tai-jutsu, bokken, jō), les horaires, l'adresse à Vescovato et les formules d'adhésion du dojo Kanjo Aïkido Isulanu."
+title_tag: "Le Dojo — Horaires, tarifs & cours d'Aïkido à Vescovato"
+description: "Découvrez la pratique, les horaires et les tarifs du dojo Kanjo Aïkido à Vescovato (Haute-Corse). Réservez vos 2 cours d'essai gratuits."
 ---
 {% set p = pages.dojo %}
 <!-- ===== HEADER ===== -->
@@ -111,6 +111,39 @@ description: "La pratique (tai-jutsu, bokken, jō), les horaires, l'adresse à V
     <p class="note-italic">Un certificat médical de non contre-indication à la pratique de l'Aïkido est requis pour l'inscription.</p>
   </div>
 </section>
+
+<!-- ===== FAQ ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">FAQ — QUESTIONS FRÉQUENTES</div>
+      <h2 class="section-title">Bien débuter au dojo</h2>
+    </div>
+    <div class="prose" style="max-width:820px; margin:0 auto; text-align:left;">
+      <h3>À partir de quel âge peut-on pratiquer l'Aïkido ?</h3>
+      <p>L'Aïkido se pratique dès l'enfance. Le dojo propose des cours enfants, un cours jeunes (13–18 ans) et des cours adultes — chacun avance à son rythme.</p>
+      <h3>Peut-on essayer avant de s'inscrire ?</h3>
+      <p>Oui : <strong>deux cours d'essai gratuits</strong> te permettent de découvrir la pratique sans engagement.</p>
+      <h3>Quels sont les horaires des cours ?</h3>
+      <p>{% for h in site.horaires %}{{ h.label }} : {{ h.value }}{% if not loop.last %} · {% endif %}{% endfor %}. Les horaires définitifs sont communiqués au dojo.</p>
+      <h3>Combien coûte l'adhésion ?</h3>
+      <p>{% for t in site.tarifs %}{{ t.name }} : {{ t.amount }} / an{% if not loop.last %} · {% endif %}{% endfor %}. Licence et assurance FFAB incluses, paiement possible en trois fois.</p>
+      <h3>Faut-il du matériel pour débuter ?</h3>
+      <p>Non : une simple tenue de sport suffit pour commencer. Le keikogi et les armes viennent plus tard, l'enseignant te guidera.</p>
+      <h3>Où se trouve le dojo ?</h3>
+      <p>Au <strong>COSEC de Vescovato</strong> (20215, Haute-Corse), au cœur de la <strong>Castagniccia-Casinca</strong>, en Corse.</p>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"À partir de quel âge peut-on pratiquer l'Aïkido ?","acceptedAnswer":{"@type":"Answer","text":"L'Aïkido se pratique dès l'enfance. Le dojo propose des cours enfants, un cours jeunes (13-18 ans) et des cours adultes."}},
+{"@type":"Question","name":"Peut-on essayer avant de s'inscrire ?","acceptedAnswer":{"@type":"Answer","text":"Oui, deux cours d'essai gratuits permettent de découvrir la pratique sans engagement."}},
+{"@type":"Question","name":"Combien coûte l'adhésion au dojo ?","acceptedAnswer":{"@type":"Answer","text":"À partir de 155 € par an pour les enfants et les jeunes, 225 € pour les adultes, 315 € en formule famille. Licence et assurance FFAB incluses, paiement en trois fois possible."}},
+{"@type":"Question","name":"Faut-il du matériel pour débuter l'Aïkido ?","acceptedAnswer":{"@type":"Answer","text":"Non, une tenue de sport suffit pour commencer. Le keikogi et les armes viennent plus tard."}},
+{"@type":"Question","name":"Où se trouve le dojo Kanjo Aïkido Isulanu ?","acceptedAnswer":{"@type":"Answer","text":"Au COSEC de Vescovato (20215, Haute-Corse), en Castagniccia-Casinca, en Corse."}}
+]}
+</script>
 
 <!-- ===== CTA ===== -->
 <section class="cta-band">

@@ -2,8 +2,8 @@
 layout: base.njk
 active: galerie
 permalink: /galerie.html
-title_tag: "Galerie — Kanjo Aïkido Isulanu"
-description: "Images de la pratique au dojo Kanjo Aïkido Isulanu : tatamis, armes, stages et instants partagés."
+title_tag: "Galerie photos — Aïkido à Vescovato | Kanjo Isulanu"
+description: "Découvrez en images la pratique de l'Aïkido au dojo Kanjo Aïkido Isulanu à Vescovato (Haute-Corse) : tatamis, armes et stages, saison par saison."
 ---
 {% set p = pages.galerie %}
 <!-- ===== HEADER ===== -->
@@ -31,7 +31,7 @@ description: "Images de la pratique au dojo Kanjo Aïkido Isulanu : tatamis, arm
           {%- if season.photos and season.photos.length %}
             {%- for photo in season.photos %}
             <div class="gallery__item">
-              <img src="{{ photo.image }}" alt="{{ photo.alt }}" style="width:100%; height:100%; object-fit:cover;">
+              <img loading="lazy" src="{{ photo.image }}" alt="{{ photo.alt }}" style="width:100%; height:100%; object-fit:cover;">
             </div>
             {%- endfor %}
           {%- else %}

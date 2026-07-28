@@ -2,8 +2,8 @@
 layout: base.njk
 active: enseignant
 permalink: /enseignant.html
-title_tag: "L'enseignant — Kanjo Aïkido Isulanu"
-description: "Le parcours de Sébastien De Raedt, 1ᵉʳ Dan (Shodan) Aïkikaï de Tokyo, fondateur du dojo Kanjo Aïkido Isulanu à Vescovato."
+title_tag: "L'enseignant — Sébastien De Raedt, Aïkido Vescovato"
+description: "Le parcours de Sébastien De Raedt, 1ᵉʳ Dan Aïkikaï de Tokyo, et de Jean-Charles Lanusse (4ᵉ Dan), enseignants du dojo Kanjo Aïkido à Vescovato."
 ---
 {% set p = pages.enseignant %}
 <!-- ===== PORTRAIT + BIO ===== -->
@@ -40,7 +40,7 @@ description: "Le parcours de Sébastien De Raedt, 1ᵉʳ Dan (Shodan) Aïkikaï 
         {%- endfor %}
       </div>
       {% if p.teacher2Photo %}
-      <img src="{{ p.teacher2Photo }}" alt="Jean-Charles Lanusse" style="display:block; width:100%; max-width:440px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
+      <img loading="lazy" src="{{ p.teacher2Photo }}" alt="Jean-Charles Lanusse" style="display:block; width:100%; max-width:440px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
       {% else %}
       <div class="placeholder-media" style="height:520px;">[ portrait · second enseignant ]</div>
       {% endif %}
