@@ -27,29 +27,7 @@ description: "Le parcours de Sébastien De Raedt, 1ᵉʳ Dan Aïkikaï de Tokyo,
   </div>
 </section>
 
-{% if p.teacher2Show %}
-<!-- ===== SECOND ENSEIGNANT ===== -->
-<section class="section section--divider">
-  <div class="section__inner">
-    <div class="two-col">
-      <div class="prose">
-        <div class="eyebrow">{{ p.teacher2Eyebrow }}</div>
-        <h2 class="section-title" style="text-align:left;">{{ p.teacher2Name }}</h2>
-        {%- for para in p.teacher2Bio %}
-        <p>{{ para | safe }}</p>
-        {%- endfor %}
-      </div>
-      {% if p.teacher2Photo %}
-      <img loading="lazy" src="{{ p.teacher2Photo }}" alt="Jean-Charles Lanusse" style="display:block; width:100%; max-width:440px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
-      {% else %}
-      <div class="placeholder-media" style="height:520px;">[ portrait · second enseignant ]</div>
-      {% endif %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-<!-- ===== CHIFFRES-CLÉS ===== -->
+<!-- ===== CHIFFRES-CLÉS · SÉBASTIEN ===== -->
 <section class="section section--alt section--divider">
   <div class="section__inner">
     <div class="stats">
@@ -72,6 +50,52 @@ description: "Le parcours de Sébastien De Raedt, 1ᵉʳ Dan Aïkikaï de Tokyo,
     </div>
   </div>
 </section>
+
+{% if p.teacher2Show %}
+<!-- ===== SECOND ENSEIGNANT ===== -->
+<section class="section section--divider">
+  <div class="section__inner">
+    <div class="two-col">
+      <div class="prose">
+        <div class="eyebrow">{{ p.teacher2Eyebrow }}</div>
+        <h2 class="section-title" style="text-align:left;">{{ p.teacher2Name }}</h2>
+        {%- for para in p.teacher2Bio %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
+      {% if p.teacher2Photo %}
+      <img loading="lazy" src="{{ p.teacher2Photo }}" alt="Jean-Charles Lanusse" style="display:block; width:100%; max-width:440px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
+      {% else %}
+      <div class="placeholder-media" style="height:520px;">[ portrait · second enseignant ]</div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHIFFRES-CLÉS · JEAN-CHARLES ===== -->
+<section class="section section--alt section--divider">
+  <div class="section__inner">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__num">4<sup>e</sup></div>
+        <div class="stat__label">Dan · CSDGE</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">1988</div>
+        <div class="stat__label">Débuts à L'Arbresle</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">2004</div>
+        <div class="stat__label">Fondation Costa Verde Aïkido</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">FFAB</div>
+        <div class="stat__label">Affiliation fédérale</div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <!-- ===== FRISE PARCOURS ===== -->
 <section class="section">
