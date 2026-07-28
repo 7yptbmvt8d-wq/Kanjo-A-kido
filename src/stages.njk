@@ -15,24 +15,37 @@ description: "Découvrez le calendrier des stages d'Aïkido de la saison à Vesc
   </div>
 </section>
 
-<!-- ===== CALENDRIER ===== -->
+<!-- ===== CALENDRIER (FRISE VERTICALE) ===== -->
 <section class="section" style="padding-bottom:50px;">
   <div class="section__inner" style="padding-top:30px;">
-    <div class="timeline">
+    <div class="stage-rail">
+      <div class="stage-rail__line"></div>
       {%- for s in p.stages %}
-      <div class="timeline__row">
-        <div class="timeline__year">{{ s.month }}</div>
-        <div>
-          <div class="timeline__title">{{ s.title }}</div>
-          <div class="timeline__desc">{{ s.desc | safe }}</div>
-        </div>
-        <div class="timeline__meta">{{ s.meta }}</div>
+      {%- if s.type == "end" %}
+      <div class="stage-item stage-item--end">
+        <div class="stage-item__date">{{ s.date }}</div>
+        <div class="stage-item__node"></div>
+        <div class="stage-item__closing">{{ s.title }}</div>
       </div>
+      {%- else %}
+      <div class="stage-item">
+        <div class="stage-item__date">{{ s.date }}</div>
+        <div class="stage-item__node"></div>
+        <div class="stage-item__card{{ ' stage-item__card--featured' if s.type == 'featured' }}">
+          <div class="stage-item__title">{{ s.title }}</div>
+          <div class="stage-item__desc">{{ s.desc | safe }}</div>
+          {%- if s.meta %}
+          <div class="stage-item__meta">{{ s.meta }}</div>
+          {%- endif %}
+        </div>
+      </div>
+      {%- endif %}
       {%- endfor %}
     </div>
-    <p class="note-italic">{{ p.note }}</p>
-    <div style="text-align:center; margin-top:40px;">
-      <a class="btn-outline" href="https://stages-aikido.fr/" target="_blank" rel="noopener">VOIR LES STAGES PARTOUT EN FRANCE</a>
+
+    <div class="stage-rail__foot">
+      <div class="note-italic" style="margin:0;">{{ p.note }}</div>
+      <a class="btn-outline" href="https://stages-aikido.fr/" target="_blank" rel="noopener">STAGES PARTOUT EN FRANCE</a>
     </div>
   </div>
 </section>
