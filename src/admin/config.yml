@@ -161,14 +161,25 @@ collections:
           - { label: "Titre", name: title, widget: string }
           - { label: "Accroche", name: lead, widget: text }
           - { label: "Note", name: note, widget: text }
-          - label: "Stages"
+          - label: "Calendrier des stages"
             name: stages
+            label_singular: "Stage / événement"
             widget: list
+            summary: "{{fields.date}} — {{fields.title}}"
+            hint: "Ajoutez, retirez ou réorganisez les événements (glisser-déposer). Ils s'affichent dans l'ordre de la liste."
             fields:
-              - { label: "Mois", name: month, widget: string }
+              - { label: "Date (colonne de gauche)", name: date, widget: string, hint: "Ex. : 2 SEPT, OCT., DÉC., JUIN…" }
               - { label: "Titre", name: title, widget: string }
-              - { label: "Description", name: desc, widget: string }
-              - { label: "Info (droite)", name: meta, widget: string }
+              - { label: "Description", name: desc, widget: text, required: false, hint: "Laisser vide pour une simple étape sans texte." }
+              - { label: "Info (petit texte sous la description)", name: meta, widget: string, required: false, hint: "Ex. : DOJO · [ VILLE ], À CONFIRMER. Laisser vide si aucune." }
+              - label: "Type d'événement"
+                name: type
+                widget: select
+                default: ""
+                options:
+                  - { label: "Stage normal", value: "" }
+                  - { label: "Événement mis en avant (encadré doré)", value: "featured" }
+                  - { label: "Clôture de saison (sans encadré)", value: "end" }
       - name: equiper
         label: "S'équiper"
         file: "src/_data/pages/equiper.json"
