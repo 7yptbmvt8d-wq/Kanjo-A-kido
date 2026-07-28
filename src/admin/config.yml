@@ -7,7 +7,7 @@ backend:
 media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
 
-publish_mode: simple
+publish_mode: editorial_workflow
 
 collections:
   # ---------- RÉGLAGES DU SITE ----------
