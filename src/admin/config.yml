@@ -178,9 +178,10 @@ collections:
               - label: "Type d'événement"
                 name: type
                 widget: select
-                default: ""
+                required: false
+                default: "normal"
                 options:
-                  - { label: "Stage normal", value: "" }
+                  - { label: "Stage normal", value: "normal" }
                   - { label: "Événement mis en avant (encadré doré)", value: "featured" }
                   - { label: "Clôture de saison (sans encadré)", value: "end" }
       - name: equiper

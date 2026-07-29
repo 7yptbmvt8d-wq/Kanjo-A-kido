@@ -16,7 +16,7 @@
       "title": "Stage de rentrée",
       "desc": "Reprise de la saison, ouvert à tous les niveaux.",
       "meta": "DOJO · [ VILLE ]",
-      "type": ""
+      "type": "normal"
     },
     {
       "date": "DÉC.",
@@ -26,14 +26,14 @@
       "meta": "À CONFIRMER",
       "link": "",
       "poster": "",
-      "type": ""
+      "type": "normal"
     },
     {
       "date": "JANV.",
       "title": "Stage technique — armes",
       "desc": "Bokken & jō, travail des déplacements et de la distance.",
       "meta": "À CONFIRMER",
-      "type": ""
+      "type": "normal"
     },
     {
       "date": "JUIN",
