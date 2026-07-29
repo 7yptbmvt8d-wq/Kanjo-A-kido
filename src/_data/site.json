@@ -34,12 +34,12 @@
   "logo": "/assets/uploads/kanjo-aikido-isulanu-noir-2048.png",
   "horaires": [
     {
-      "label": "Sénior - Grand débutant",
-      "value": "Vendredi de 9h30 - 11h00"
-    },
-    {
       "label": "Jeunes (9 à 16 ans)",
       "value": "Mercredi de 14h30 - 16h30"
+    },
+    {
+      "label": "Sénior - Grand débutant",
+      "value": "Vendredi de 9h30 - 11h00"
     }
   ],
   "social": {
