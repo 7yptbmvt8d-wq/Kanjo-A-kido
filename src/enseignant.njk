@@ -56,18 +56,18 @@ description: "Le parcours de Sébastien De Raedt, 1ᵉʳ Dan Aïkikaï de Tokyo,
 <section class="section section--divider">
   <div class="section__inner">
     <div class="two-col">
-      <div class="prose">
-        <div class="eyebrow">{{ p.teacher2Eyebrow }}</div>
-        <h2 class="section-title" style="text-align:left;">{{ p.teacher2Name }}</h2>
-        {%- for para in p.teacher2Bio %}
-        <p>{{ para | safe }}</p>
-        {%- endfor %}
-      </div>
       {% if p.teacher2Photo %}
       <img loading="lazy" src="{{ p.teacher2Photo }}" alt="Jean-Charles Lanusse" style="display:block; width:100%; max-width:440px; height:auto; margin:0 auto; border:1px solid var(--gold-18);">
       {% else %}
       <div class="placeholder-media" style="height:520px;">[ portrait · second enseignant ]</div>
       {% endif %}
+      <div class="prose">
+        <div class="eyebrow">{{ p.teacher2Eyebrow }}</div>
+        <p style="font-size:20px; color:var(--text-strong);"><strong>{{ p.teacher2Name }}</strong></p>
+        {%- for para in p.teacher2Bio %}
+        <p>{{ para | safe }}</p>
+        {%- endfor %}
+      </div>
     </div>
   </div>
 </section>
