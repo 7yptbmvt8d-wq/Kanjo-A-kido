@@ -920,7 +920,7 @@ img { display: block; max-width: 100%; }
 }
 .stage-item__node {
   position: absolute;
-  left: -44px;
+  left: -45px;
   top: 5px;
   width: 11px;
   height: 11px;
@@ -995,7 +995,7 @@ img { display: block; max-width: 100%; }
   width: 9px;
   height: 9px;
   top: 3px;
-  left: -43px;
+  left: -44px;
   background: transparent;
   border: 1px solid var(--gold);
   box-shadow: none;
@@ -1024,8 +1024,8 @@ img { display: block; max-width: 100%; }
     margin-top: 24px;
   }
   .stage-rail__line { left: 6px; }
-  .stage-item__node { left: -28px; }
-  .stage-item--end .stage-item__node { left: -27px; }
+  .stage-item__node { left: -33px; }
+  .stage-item--end .stage-item__node { left: -32px; }
   .stage-item__date {
     position: static;
     display: block;
