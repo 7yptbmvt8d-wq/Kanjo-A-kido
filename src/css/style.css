@@ -958,6 +958,14 @@ img { display: block; max-width: 100%; }
   line-height: 1.55;
   margin-top: 8px;
 }
+.stage-item__poster {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin-top: 18px;
+  border: 1px solid var(--gold-18);
+}
 .stage-item__btn {
   display: inline-block;
   margin-top: 16px;

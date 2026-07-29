@@ -173,8 +173,8 @@ collections:
               - { label: "Période (du … au …)", name: dates, widget: string, required: false, hint: "Affiché en doré sur la carte. Ex. : Du 12 au 14 décembre 2026. Laisser vide si sans objet." }
               - { label: "Description", name: desc, widget: text, required: false, hint: "Laisser vide pour une simple étape sans texte." }
               - { label: "Info (petit texte sous la description)", name: meta, widget: string, required: false, hint: "Ex. : DOJO · [ VILLE ], À CONFIRMER. Laisser vide si aucune." }
-              - { label: "Lien d'inscription / paiement", name: link, widget: string, required: false, hint: "URL (HelloAsso, formulaire…). Un bouton apparaît sur la carte. Laisser vide pour aucun bouton." }
-              - { label: "Texte du bouton", name: linkLabel, widget: string, required: false, hint: "Ex. : S'inscrire au stage, Payer le stage. Par défaut : « S'inscrire au stage »." }
+              - { label: "Lien d'inscription / paiement", name: link, widget: string, required: false, hint: "URL (HelloAsso, formulaire…). Un bouton « S'inscrire » apparaît sur la carte. Laisser vide pour aucun bouton." }
+              - { label: "Affiche du stage", name: poster, widget: image, required: false, hint: "Image de l'affiche (facultatif). Elle s'affiche sur la carte du stage." }
               - label: "Type d'événement"
                 name: type
                 widget: select

@@ -42,8 +42,13 @@ description: "Découvrez le calendrier des stages d'Aïkido de la saison à Vesc
           {%- if s.meta %}
           <div class="stage-item__meta">{{ s.meta }}</div>
           {%- endif %}
+          {%- if s.poster %}
+          <a href="{{ s.link or s.poster }}" target="_blank" rel="noopener">
+            <img loading="lazy" class="stage-item__poster" src="{{ s.poster }}" alt="Affiche — {{ s.title }}">
+          </a>
+          {%- endif %}
           {%- if s.link %}
-          <a class="stage-item__btn" href="{{ s.link }}" target="_blank" rel="noopener">{{ s.linkLabel or "S'inscrire au stage" }}</a>
+          <a class="stage-item__btn" href="{{ s.link }}" target="_blank" rel="noopener">S'inscrire</a>
           {%- endif %}
         </div>
       </div>
