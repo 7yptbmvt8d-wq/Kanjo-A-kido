@@ -944,11 +944,36 @@ img { display: block; max-width: 100%; }
   color: var(--gold);
 }
 .stage-item__card--featured .stage-item__title { font-size: 28px; }
+.stage-item__dates {
+  font-family: var(--font-sans);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 6px;
+}
 .stage-item__desc {
   color: var(--text-muted);
   font-size: 15px;
   line-height: 1.55;
   margin-top: 8px;
+}
+.stage-item__btn {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-50);
+  padding: 10px 20px;
+  transition: background .2s, color .2s;
+}
+.stage-item__btn:hover {
+  background: var(--gold);
+  color: var(--bg);
 }
 .stage-item__meta {
   font-family: var(--font-sans);

@@ -168,10 +168,13 @@ collections:
             summary: "{{fields.date}} — {{fields.title}}"
             hint: "Ajoutez, retirez ou réorganisez les événements (glisser-déposer). Ils s'affichent dans l'ordre de la liste."
             fields:
-              - { label: "Date (colonne de gauche)", name: date, widget: string, hint: "Ex. : 2 SEPT, OCT., DÉC., JUIN…" }
+              - { label: "Date (colonne de gauche)", name: date, widget: string, hint: "Repère court affiché à gauche de la frise. Ex. : 2 SEPT, OCT., DÉC., JUIN…" }
               - { label: "Titre", name: title, widget: string }
+              - { label: "Période (du … au …)", name: dates, widget: string, required: false, hint: "Affiché en doré sur la carte. Ex. : Du 12 au 14 décembre 2026. Laisser vide si sans objet." }
               - { label: "Description", name: desc, widget: text, required: false, hint: "Laisser vide pour une simple étape sans texte." }
               - { label: "Info (petit texte sous la description)", name: meta, widget: string, required: false, hint: "Ex. : DOJO · [ VILLE ], À CONFIRMER. Laisser vide si aucune." }
+              - { label: "Lien d'inscription / paiement", name: link, widget: string, required: false, hint: "URL (HelloAsso, formulaire…). Un bouton apparaît sur la carte. Laisser vide pour aucun bouton." }
+              - { label: "Texte du bouton", name: linkLabel, widget: string, required: false, hint: "Ex. : S'inscrire au stage, Payer le stage. Par défaut : « S'inscrire au stage »." }
               - label: "Type d'événement"
                 name: type
                 widget: select
