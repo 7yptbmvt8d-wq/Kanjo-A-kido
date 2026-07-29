@@ -67,6 +67,10 @@
 
 {{ content | safe }}
 
+{% if page.url != "/merci.html" %}
+{% include "cta.njk" %}
+{% endif %}
+
 {% include "footer.njk" %}
 
 <script src="/js/nav.js"></script>
