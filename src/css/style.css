@@ -886,6 +886,30 @@ img { display: block; max-width: 100%; }
   .gallery__item--wide { grid-column: span 1; }
 }
 
+/* ===== BOUTON WHATSAPP FLOTTANT ===== */
+.wa-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.wa-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(37,211,102,.45);
+}
+@media (max-width: 520px) {
+  .wa-fab { width: 52px; height: 52px; right: 16px; bottom: 16px; }
+}
+
 /* ===== FRISE VERTICALE — STAGES ===== */
 .stage-rail {
   position: relative;
