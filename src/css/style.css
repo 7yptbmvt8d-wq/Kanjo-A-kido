@@ -886,6 +886,55 @@ img { display: block; max-width: 100%; }
   .gallery__item--wide { grid-column: span 1; }
 }
 
+/* ===== BANDEAU COOKIES ===== */
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--bg-alt);
+  border: 1px solid var(--gold-30);
+  box-shadow: 0 8px 30px rgba(0,0,0,.45);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cookie-banner__text {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.cookie-banner__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+.cookie-btn {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid var(--gold-50);
+  cursor: pointer;
+  background: transparent;
+  transition: background .2s, color .2s;
+}
+.cookie-btn--ghost { color: var(--text-muted); }
+.cookie-btn--ghost:hover { color: var(--gold); border-color: var(--gold); }
+.cookie-btn--gold { background: var(--gold); color: var(--bg); border-color: var(--gold); font-weight: 500; }
+.cookie-btn--gold:hover { background: var(--text-strong); border-color: var(--text-strong); }
+.cookie-open .wa-fab { display: none; }
+@media (max-width: 520px) {
+  .cookie-banner { left: 10px; right: 10px; bottom: 10px; }
+}
+
 /* ===== TÉMOIGNAGES ===== */
 .testi-grid {
   display: grid;

@@ -82,8 +82,51 @@
 </a>
 
 <script src="/js/nav.js"></script>
-<!-- Cloudflare Web Analytics -->
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "78429a55891849b0b9001ae740d9a9e4"}'></script>
-<!-- End Cloudflare Web Analytics -->
+
+<!-- Bandeau de consentement cookies + Google Analytics (chargé après acceptation) -->
+<div id="cookie-banner" class="cookie-banner" hidden>
+  <p class="cookie-banner__text">Ce site utilise des cookies de mesure d'audience (Google Analytics) pour comprendre sa fréquentation. Vous pouvez accepter ou refuser — le site fonctionne dans les deux cas.</p>
+  <div class="cookie-banner__actions">
+    <button type="button" id="cookie-refuse" class="cookie-btn cookie-btn--ghost">Refuser</button>
+    <button type="button" id="cookie-accept" class="cookie-btn cookie-btn--gold">Accepter</button>
+  </div>
+</div>
+<script>
+(function () {
+  var GA_ID = "{{ site.gaId }}";
+  var KEY = "kanjo-consent";
+  function loadGA() {
+    if (window.__gaLoaded || !GA_ID) return;
+    window.__gaLoaded = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date());
+    gtag("config", GA_ID, { anonymize_ip: true });
+  }
+  var choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) {}
+  if (choice === "granted") {
+    loadGA();
+  } else if (choice !== "denied") {
+    var b = document.getElementById("cookie-banner");
+    if (b) {
+      b.hidden = false;
+      document.body.classList.add("cookie-open");
+      document.getElementById("cookie-accept").onclick = function () {
+        try { localStorage.setItem(KEY, "granted"); } catch (e) {}
+        b.hidden = true; document.body.classList.remove("cookie-open"); loadGA();
+      };
+      document.getElementById("cookie-refuse").onclick = function () {
+        try { localStorage.setItem(KEY, "denied"); } catch (e) {}
+        b.hidden = true; document.body.classList.remove("cookie-open");
+      };
+    }
+  }
+})();
+</script>
 </body>
 </html>
