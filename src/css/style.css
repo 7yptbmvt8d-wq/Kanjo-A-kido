@@ -887,6 +887,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ===== BANDEAU COOKIES ===== */
+.cookie-banner[hidden] { display: none !important; }
 .cookie-banner {
   position: fixed;
   left: 16px;
