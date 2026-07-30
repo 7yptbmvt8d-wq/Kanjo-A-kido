@@ -12,6 +12,25 @@
   "quote": "« L'Aïkido nous invite à chercher l'harmonie, pas les médailles. »",
   "voieEyebrow": "道 — UNE VOIE POUR CHACUN",
   "voieTitle": "L'Aïkido, un art de vivre",
+  "testiEyebrow": "口コミ — TÉMOIGNAGES",
+  "testiTitle": "Ils pratiquent avec nous",
+  "testimonials": [
+    {
+      "quote": "Une ambiance bienveillante où l'on progresse à son rythme. J'appréhendais de débuter à l'âge adulte, mais je me suis senti à ma place dès le premier cours.",
+      "name": "Marc",
+      "meta": "Adhérent débutant"
+    },
+    {
+      "quote": "Mon fils de 11 ans adore ses cours du mercredi. Il y gagne en confiance et en concentration, et l'enseignant est très pédagogue avec les jeunes.",
+      "name": "Sandrine",
+      "meta": "Maman d'un jeune pratiquant"
+    },
+    {
+      "quote": "Un enseignement exigeant et sincère, dans le respect de la tradition. Les deux cours d'essai m'ont convaincue de m'inscrire.",
+      "name": "Julie",
+      "meta": "Adhérente"
+    }
+  ],
   "voieParas": [
     "L'Aïkido est une pratique ouverte à toutes et à tous. Chacun peut y trouver sa place, quel que soit son âge, sa condition physique ou même en présence d'un handicap léger. Loin de l'esprit de compétition, c'est une discipline qui met l'accent sur l'épanouissement personnel.",
     "Plus qu'une technique, c'est un art de vivre : il cultive le bien-être, la confiance en soi et le respect de l'autre. Chaque pratiquant évolue à son propre rythme, guidé par une pratique sincère et bienveillante.",

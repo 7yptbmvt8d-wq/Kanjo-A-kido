@@ -886,6 +886,59 @@ img { display: block; max-width: 100%; }
   .gallery__item--wide { grid-column: span 1; }
 }
 
+/* ===== TÉMOIGNAGES ===== */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testi {
+  position: relative;
+  margin: 0;
+  padding: 34px 28px 28px;
+  background: var(--bg-alt);
+  border: 1px solid var(--gold-18);
+  display: flex;
+  flex-direction: column;
+}
+.testi__mark {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  line-height: 0.6;
+  color: var(--gold-30);
+  height: 30px;
+}
+.testi__quote {
+  margin: 0 0 20px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--text-strong);
+  flex: 1;
+}
+.testi__cite {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid var(--gold-12);
+  padding-top: 14px;
+}
+.testi__name {
+  font-family: var(--font-title);
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+.testi__meta {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+@media (max-width: 860px) {
+  .testi-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+}
+
 /* ===== BOUTON WHATSAPP FLOTTANT ===== */
 .wa-fab {
   position: fixed;

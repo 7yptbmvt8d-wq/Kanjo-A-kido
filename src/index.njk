@@ -106,3 +106,32 @@ description: "Dojo d'Aïkido à Vescovato (Haute-Corse), ouvert à toutes et à 
     </div>
   </div>
 </section>
+
+{% if p.testimonials %}
+<!-- ===== TÉMOIGNAGES ===== -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">{{ p.testiEyebrow }}</div>
+      <h2 class="section-title">{{ p.testiTitle }}</h2>
+    </div>
+    <div class="testi-grid">
+      {%- for t in p.testimonials %}
+      <figure class="testi">
+        <div class="testi__mark">”</div>
+        <blockquote class="testi__quote">{{ t.quote }}</blockquote>
+        <figcaption class="testi__cite">
+          <span class="testi__name">{{ t.name }}</span>
+          {%- if t.meta %}<span class="testi__meta">{{ t.meta }}</span>{% endif %}
+        </figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    {%- if site.reviewUrl %}
+    <div style="text-align:center; margin-top:44px;">
+      <a class="btn-outline" href="{{ site.reviewUrl }}" target="_blank" rel="noopener">LAISSER UN AVIS</a>
+    </div>
+    {%- endif %}
+  </div>
+</section>
+{% endif %}
