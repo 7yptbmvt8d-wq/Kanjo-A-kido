@@ -31,7 +31,8 @@
       "url": "https://www.ffabaikido.fr"
     }
   ],
-  "logo": "/assets/uploads/kanjo-aikido-isulanu-noir-2048.png",
+  "reviewUrl": "https://g.page/r/CeTHmYQVr_5DEBI/review",
+  "logo": "/assets/uploads/kanjo-aikido-isulanu-noir-2048.webp",
   "horaires": [
     {
       "label": "Jeunes (9 à 16 ans)",
@@ -75,7 +76,7 @@
     {
       "name": "Famille",
       "amount": "315 €",
-      "period": "1 adulte + 1 enfant",
+      "period": "1 adulte + 1 jeune",
       "featured": false,
       "features": [
         "Pour deux pratiquants",

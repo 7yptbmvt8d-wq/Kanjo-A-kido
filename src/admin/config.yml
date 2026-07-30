@@ -21,6 +21,7 @@ collections:
         fields:
           - { label: "Logo (image)", name: logo, widget: image, required: false, hint: "Laisser vide pour garder le logo doré par défaut." }
           - { label: "Lien HelloAsso (inscription)", name: helloasso, widget: string, required: false, hint: "URL de la page d'inscription HelloAsso. Vide = les boutons renvoient vers Contact." }
+          - { label: "Lien 'Laisser un avis' (Google)", name: reviewUrl, widget: string, required: false, hint: "URL d'avis de ta fiche Google Business. Fait apparaître un bouton sous les témoignages. Vide = pas de bouton." }
           - label: "Marque"
             name: brand
             widget: object
@@ -112,6 +113,20 @@ collections:
           - { label: "情 Jo — libellé", name: joLabel, widget: string }
           - { label: "情 Jo — description", name: joDesc, widget: text }
           - { label: "Citation", name: quote, widget: string }
+          - { label: "Témoignages — sur-titre", name: testiEyebrow, widget: string, required: false }
+          - { label: "Témoignages — titre", name: testiTitle, widget: string, required: false }
+          - label: "Témoignages / avis"
+            name: testimonials
+            label_singular: "Témoignage"
+            widget: list
+            required: false
+            summary: "{{fields.name}} — {{fields.quote}}"
+            hint: "Ajoutez, modifiez ou retirez des témoignages d'élèves. Laissez la liste vide pour masquer la section."
+            fields:
+              - { label: "Note (étoiles)", name: rating, widget: number, required: false, default: 5, value_type: int, min: 1, max: 5, step: 1, hint: "De 1 à 5 étoiles. Laisser vide pour ne pas afficher d'étoiles." }
+              - { label: "Témoignage (texte)", name: quote, widget: text }
+              - { label: "Prénom / nom", name: name, widget: string }
+              - { label: "Rôle (sous le nom)", name: meta, widget: string, required: false, hint: "Ex. : Adhérent débutant, Maman d'un jeune pratiquant." }
           - { label: "Voie — sur-titre", name: voieEyebrow, widget: string }
           - { label: "Voie — titre", name: voieTitle, widget: string }
           - { label: "Voie — paragraphes", name: voieParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }

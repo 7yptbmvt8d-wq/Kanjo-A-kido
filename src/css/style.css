@@ -886,6 +886,91 @@ img { display: block; max-width: 100%; }
   .gallery__item--wide { grid-column: span 1; }
 }
 
+/* ===== TÉMOIGNAGES ===== */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testi {
+  position: relative;
+  margin: 0;
+  padding: 34px 28px 28px;
+  background: var(--bg-alt);
+  border: 1px solid var(--gold-18);
+  display: flex;
+  flex-direction: column;
+}
+.testi__mark {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  line-height: 0.6;
+  color: var(--gold-30);
+  height: 30px;
+}
+.testi__stars {
+  margin: 4px 0 14px;
+  font-size: 17px;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+.testi__stars span { color: var(--gold-18); }
+.testi__stars span.is-on { color: var(--gold); }
+.testi__quote {
+  margin: 0 0 20px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--text-strong);
+  flex: 1;
+}
+.testi__cite {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid var(--gold-12);
+  padding-top: 14px;
+}
+.testi__name {
+  font-family: var(--font-title);
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+.testi__meta {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+@media (max-width: 860px) {
+  .testi-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+}
+
+/* ===== BOUTON WHATSAPP FLOTTANT ===== */
+.wa-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.wa-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(37,211,102,.45);
+}
+@media (max-width: 520px) {
+  .wa-fab { width: 52px; height: 52px; right: 16px; bottom: 16px; }
+}
+
 /* ===== FRISE VERTICALE — STAGES ===== */
 .stage-rail {
   position: relative;

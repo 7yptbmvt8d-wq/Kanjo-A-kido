@@ -7,19 +7,19 @@
     {
       "kanji": "合気道着",
       "title": "Aïkidogi",
-      "image": "/assets/uploads/aikidogi.png",
+      "image": "/assets/uploads/aikidogi.webp",
       "desc": "Le kimono : essentiel pour commencer votre pratique. La ceinture blanche marque le début de votre formation ; la ceinture noire (1ᵉʳ Dan), le début d'un travail plus profond de l'Aïkido."
     },
     {
       "kanji": "袴",
       "title": "Hakama",
-      "image": "/assets/uploads/hakama.png",
+      "image": "/assets/uploads/hakama.webp",
       "desc": "Le pantalon plissé traditionnel : un investissement plus conséquent. Le professeur vous en autorise le port le moment opportun."
     },
     {
       "kanji": "武器",
       "title": "Armes",
-      "image": "/assets/uploads/lot-armes.png",
+      "image": "/assets/uploads/lot-armes.webp",
       "desc": "Bokken (sabre), jō (bâton) et tanto (couteau). Les armes permettent une autre approche de l'Aïkido, mais ne sont pas nécessaires au début."
     }
   ]

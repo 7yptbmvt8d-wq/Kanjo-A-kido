@@ -15,11 +15,13 @@
 <meta property="og:title" content="{{ title_tag }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="{{ site.url }}{{ site.logo or '/assets/logo-square.svg' }}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{{ site.url }}/assets/uploads/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ title_tag }}">
 <meta name="twitter:description" content="{{ description }}">
-<meta name="twitter:image" content="{{ site.url }}{{ site.logo or '/assets/logo-square.svg' }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/uploads/og-image.png">
 <link rel="icon" href="/assets/logo-square.svg" type="image/svg+xml">
 <!-- Données structurées (dojo local) -->
 <script type="application/ld+json">
@@ -72,6 +74,12 @@
 {% endif %}
 
 {% include "footer.njk" %}
+
+<a class="wa-fab" href="https://wa.me/{{ site.contact.phoneIntl | replace('+','') }}?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20les%20cours%20d'A%C3%AFkido." target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+    <path fill="#fff" d="M16.04 4C9.9 4 4.92 8.98 4.92 15.12c0 2.04.54 3.98 1.56 5.7L4.8 27l6.36-1.66a11.1 11.1 0 0 0 4.88 1.12h.01c6.14 0 11.12-4.98 11.12-11.12S22.18 4 16.04 4Zm0 20.3h-.01a9.2 9.2 0 0 1-4.68-1.28l-.34-.2-3.78.99 1-3.68-.22-.38a9.16 9.16 0 0 1-1.4-4.86c0-5.08 4.14-9.22 9.22-9.22 2.46 0 4.78.96 6.52 2.7a9.16 9.16 0 0 1 2.7 6.52c0 5.08-4.14 9.22-9.22 9.22Zm5.06-6.9c-.28-.14-1.64-.8-1.9-.9-.26-.1-.44-.14-.62.14-.18.28-.72.9-.88 1.08-.16.18-.32.2-.6.06-.28-.14-1.18-.44-2.24-1.38-.82-.74-1.38-1.64-1.54-1.92-.16-.28-.02-.42.12-.56.12-.12.28-.32.42-.48.14-.16.18-.28.28-.46.1-.18.04-.34-.02-.48-.06-.14-.62-1.5-.86-2.06-.22-.54-.46-.46-.62-.48h-.54c-.18 0-.48.06-.72.34-.24.28-.94.92-.94 2.24s.96 2.6 1.1 2.78c.14.18 1.9 2.9 4.6 4.06.64.28 1.14.44 1.54.56.64.2 1.22.18 1.68.1.52-.08 1.64-.66 1.86-1.3.24-.64.24-1.18.16-1.3-.06-.12-.24-.18-.52-.32Z"/>
+  </svg>
+</a>
 
 <script src="/js/nav.js"></script>
 <!-- Cloudflare Web Analytics -->
