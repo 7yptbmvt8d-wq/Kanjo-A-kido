@@ -18,17 +18,20 @@
     {
       "quote": "Une ambiance bienveillante où l'on progresse à son rythme. J'appréhendais de débuter à l'âge adulte, mais je me suis senti à ma place dès le premier cours.",
       "name": "Marc",
-      "meta": "Adhérent débutant"
+      "meta": "Adhérent débutant",
+      "rating": 5
     },
     {
       "quote": "Mon fils de 11 ans adore ses cours du mercredi. Il y gagne en confiance et en concentration, et l'enseignant est très pédagogue avec les jeunes.",
       "name": "Sandrine",
-      "meta": "Maman d'un jeune pratiquant"
+      "meta": "Maman d'un jeune pratiquant",
+      "rating": 5
     },
     {
       "quote": "Un enseignement exigeant et sincère, dans le respect de la tradition. Les deux cours d'essai m'ont convaincue de m'inscrire.",
       "name": "Julie",
-      "meta": "Adhérente"
+      "meta": "Adhérente",
+      "rating": 5
     }
   ],
   "voieParas": [

@@ -908,6 +908,14 @@ img { display: block; max-width: 100%; }
   color: var(--gold-30);
   height: 30px;
 }
+.testi__stars {
+  margin: 4px 0 14px;
+  font-size: 17px;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+.testi__stars span { color: var(--gold-18); }
+.testi__stars span.is-on { color: var(--gold); }
 .testi__quote {
   margin: 0 0 20px;
   font-family: var(--font-serif);

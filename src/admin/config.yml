@@ -123,6 +123,7 @@ collections:
             summary: "{{fields.name}} — {{fields.quote}}"
             hint: "Ajoutez, modifiez ou retirez des témoignages d'élèves. Laissez la liste vide pour masquer la section."
             fields:
+              - { label: "Note (étoiles)", name: rating, widget: number, required: false, default: 5, value_type: int, min: 1, max: 5, step: 1, hint: "De 1 à 5 étoiles. Laisser vide pour ne pas afficher d'étoiles." }
               - { label: "Témoignage (texte)", name: quote, widget: text }
               - { label: "Prénom / nom", name: name, widget: string }
               - { label: "Rôle (sous le nom)", name: meta, widget: string, required: false, hint: "Ex. : Adhérent débutant, Maman d'un jeune pratiquant." }
