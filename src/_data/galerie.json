@@ -2,7 +2,23 @@
   "seasons": [
     {
       "title": "Saison 2026 – 2027",
-      "photos": []
+      "photos": [
+        {
+          "image": "/assets/uploads/enseignant.jpg"
+        },
+        {
+          "image": "/assets/uploads/img_0431.jpg"
+        },
+        {
+          "image": "/assets/uploads/5d86d558-b642-4778-8d4e-4780774d1036.jpg"
+        },
+        {
+          "image": "/assets/uploads/img_0207.jpg"
+        },
+        {
+          "image": "/assets/uploads/1000070125_308745066248005.jpg"
+        }
+      ]
     }
   ]
 }
