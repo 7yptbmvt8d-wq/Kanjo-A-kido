@@ -914,12 +914,26 @@ img { display: block; max-width: 100%; }
 .carousel__slide img {
   display: block;
   width: 100%;
-  height: clamp(280px, 52vw, 560px);
+  height: clamp(300px, 60vw, 600px);
   object-fit: cover;
 }
-@media (min-width: 760px) {
-  .carousel__slide { flex-basis: calc(50% - 7px); }
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
 }
+.carousel__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-50);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+.carousel__dot.is-active { background: var(--gold); transform: scale(1.25); }
 .carousel__btn {
   position: absolute;
   top: 50%;
