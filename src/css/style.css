@@ -930,6 +930,38 @@ img { display: block; max-width: 100%; }
   .gallery__item--wide { grid-column: span 1; }
 }
 
+/* ===== BANDEAU APPLICATION ===== */
+.app-band {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.app-band__badge { display: flex; justify-content: center; }
+.app-band__phone {
+  width: 190px;
+  height: 300px;
+  border-radius: 28px;
+  border: 1px solid var(--gold-30);
+  background: linear-gradient(160deg, var(--bg-alt), var(--bg));
+  box-shadow: 0 18px 50px rgba(0,0,0,.45), inset 0 0 0 6px rgba(201,162,77,.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-band__kanji {
+  font-family: var(--font-serif);
+  font-size: 90px;
+  color: var(--gold);
+  opacity: .85;
+}
+@media (max-width: 760px) {
+  .app-band { grid-template-columns: 1fr; gap: 32px; }
+  .app-band__badge { order: -1; }
+  .app-band__phone { width: 150px; height: 240px; }
+  .app-band__kanji { font-size: 70px; }
+}
+
 /* ===== CARROUSEL GALERIE ===== */
 .carousel { position: relative; }
 .carousel__track {

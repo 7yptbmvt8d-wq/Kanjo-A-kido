@@ -22,6 +22,7 @@ collections:
           - { label: "Logo (image)", name: logo, widget: image, required: false, hint: "Laisser vide pour garder le logo doré par défaut." }
           - { label: "Lien HelloAsso (inscription)", name: helloasso, widget: string, required: false, hint: "URL de la page d'inscription HelloAsso. Vide = les boutons renvoient vers Contact." }
           - { label: "Lien 'Laisser un avis' (Google)", name: reviewUrl, widget: string, required: false, hint: "URL d'avis de ta fiche Google Business. Fait apparaître un bouton sous les témoignages. Vide = pas de bouton." }
+          - { label: "Lien de l'application (PWA)", name: appUrl, widget: string, required: false, hint: "URL de l'application web du dojo. Affiche une section 'Installer l'application' sur l'accueil et un lien dans le pied de page. Vide = masqué." }
           - label: "Marque"
             name: brand
             widget: object

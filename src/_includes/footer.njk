@@ -28,6 +28,7 @@
     </a>
     <div class="footer-bar__links">
       <a href="tel:{{ site.contact.phoneIntl }}">{{ site.contact.phone }}</a>
+      {%- if site.appUrl %}<a href="{{ site.appUrl }}" target="_blank" rel="noopener">APPLICATION</a>{% endif %}
       <a href="{{ site.social.youtube }}" target="_blank" rel="noopener">YOUTUBE</a>
       <a href="{{ site.social.facebook }}" target="_blank" rel="noopener">FACEBOOK</a>
       <a href="{{ site.social.whatsapp }}" target="_blank" rel="noopener">WHATSAPP</a>
