@@ -15,56 +15,68 @@ description: "Contactez le dojo Kanjo Aïkido Isulanu à Vescovato (Haute-Corse)
   </div>
 </section>
 
-<!-- ===== COORDONNÉES + FORM ===== -->
+<!-- ===== FORMULAIRE ===== -->
 <section class="section section--alt section--divider">
   <div class="section__inner">
-    <div class="contact-grid">
-      <div>
-        <ul class="contact-list">
-          <li>
-            <div class="contact-list__label">Email</div>
-            <div class="contact-list__value"><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
-          </li>
-          <li>
-            <div class="contact-list__label">Téléphone</div>
-            <div class="contact-list__value"><a href="tel:{{ site.contact.phoneIntl }}">{{ site.contact.phone }}</a> · {{ site.contact.person }}</div>
-          </li>
-          <li>
-            <div class="contact-list__label">Adresse</div>
-            <div class="contact-list__value">Kanjo Aïkido Isulanu<br>{{ site.contact.address }}<br>{{ site.contact.ville }}</div>
-          </li>
-          <li>
-            <div class="contact-list__label">Réseaux</div>
-            <div class="contact-list__value" style="font-size:15px;">
-              <a href="{{ site.social.youtube }}" target="_blank" rel="noopener">YouTube</a> ·
-              <a href="{{ site.social.facebook }}" target="_blank" rel="noopener">Facebook</a> ·
-              <a href="{{ site.social.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <form class="contact-form" name="contact" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none;">
-            <label>Ne pas remplir : <input name="bot-field"></label>
-          </p>
+    <div class="form-card">
+      <form class="contact-form" name="contact" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;">
+          <label>Ne pas remplir : <input name="bot-field"></label>
+        </p>
+        <div class="contact-form__row">
           <div>
-            <label for="nom">Nom</label>
-            <input id="nom" name="nom" type="text" required placeholder="Votre nom">
+            <label for="nom">Nom et prénom *</label>
+            <input id="nom" name="nom" type="text" required placeholder="Votre nom et prénom">
           </div>
           <div>
-            <label for="email">Email</label>
+            <label for="email">E-mail *</label>
             <input id="email" name="email" type="email" required placeholder="vous@exemple.fr">
           </div>
+        </div>
+        <div class="contact-form__row">
           <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Je souhaite réserver un cours d'essai…"></textarea>
+            <label for="telephone">Téléphone</label>
+            <input id="telephone" name="telephone" type="tel" placeholder="06 12 34 56 78">
           </div>
-          <button class="btn-gold" type="submit">ENVOYER</button>
-        </form>
-      </div>
+          <div>
+            <label for="pour_qui">Pour qui ?</label>
+            <select id="pour_qui" name="pour_qui">
+              <option>Jeunes (9 à 16 ans)</option>
+              <option>Séniors (grand débutant)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="message">Message (optionnel)</label>
+          <textarea id="message" name="message" placeholder="Vos disponibilités, une question…"></textarea>
+        </div>
+        <button class="btn-gold" type="submit">ENVOYER MA DEMANDE</button>
+      </form>
     </div>
+
+    <ul class="contact-list contact-list--row">
+      <li>
+        <div class="contact-list__label">Email</div>
+        <div class="contact-list__value"><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
+      </li>
+      <li>
+        <div class="contact-list__label">Téléphone</div>
+        <div class="contact-list__value"><a href="tel:{{ site.contact.phoneIntl }}">{{ site.contact.phone }}</a> · {{ site.contact.person }}</div>
+      </li>
+      <li>
+        <div class="contact-list__label">Adresse</div>
+        <div class="contact-list__value">Kanjo Aïkido Isulanu<br>{{ site.contact.address }}<br>{{ site.contact.ville }}</div>
+      </li>
+      <li>
+        <div class="contact-list__label">Réseaux</div>
+        <div class="contact-list__value" style="font-size:15px;">
+          <a href="{{ site.social.youtube }}" target="_blank" rel="noopener">YouTube</a> ·
+          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener">Facebook</a> ·
+          <a href="{{ site.social.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 
