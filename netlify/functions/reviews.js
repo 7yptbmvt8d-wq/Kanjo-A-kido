@@ -15,6 +15,9 @@ exports.handler = async function (event) {
     return { statusCode: 500, headers, body: JSON.stringify({ error: "GOOGLE_PLACES_KEY manquante" }) };
   }
 
+  // En mode debug, on peut tester avec une autre fiche via ?q=...
+  const query = (debug && event.queryStringParameters.q) || QUERY;
+
   try {
     // 1) Recherche de la fiche
     const searchRes = await fetch("https://places.googleapis.com/v1/places:searchText", {
@@ -24,7 +27,7 @@ exports.handler = async function (event) {
         "X-Goog-Api-Key": key,
         "X-Goog-FieldMask": "places.id,places.displayName",
       },
-      body: JSON.stringify({ textQuery: QUERY, languageCode: "fr", regionCode: "FR" }),
+      body: JSON.stringify({ textQuery: query, languageCode: "fr", regionCode: "FR" }),
     });
     const search = await searchRes.json();
     const place = search.places && search.places[0];
