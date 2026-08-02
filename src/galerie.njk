@@ -27,25 +27,31 @@ description: "Découvrez en images la pratique de l'Aïkido au dojo Kanjo Aïkid
       {%- for season in galerie.seasons %}
       <div class="gallery-season">
         <h2 class="gallery-season__title">{{ season.title }}</h2>
-        <div class="gallery">
-          {%- if season.photos and season.photos.length %}
-            {%- for photo in season.photos %}
-            <div class="gallery__item">
-              <img loading="lazy" src="{{ photo.image }}" alt="{{ photo.alt }}" style="width:100%; height:100%; object-fit:cover;">
+        {%- if season.photos and season.photos.length %}
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel__btn carousel__btn--prev" aria-label="Photo précédente">‹</button>
+            <div class="carousel__track">
+              {%- for photo in season.photos %}
+              <figure class="carousel__slide">
+                <img loading="lazy" src="{{ photo.image }}" alt="{{ photo.alt }}">
+              </figure>
+              {%- endfor %}
             </div>
-            {%- endfor %}
-          {%- else %}
+            <button type="button" class="carousel__btn carousel__btn--next" aria-label="Photo suivante">›</button>
+          </div>
+        {%- else %}
+          <div class="carousel__track">
             {%- for i in range(0, 3) %}
-            <div class="gallery__item placeholder-media">[ photo ]</div>
+            <figure class="carousel__slide placeholder-media" style="min-height:320px;">[ photo ]</figure>
             {%- endfor %}
-          {%- endif %}
-        </div>
+          </div>
+        {%- endif %}
       </div>
       {%- endfor %}
     {%- else %}
-      <div class="gallery">
-        {%- for i in range(0, 6) %}
-        <div class="gallery__item placeholder-media">[ photo ]</div>
+      <div class="carousel__track">
+        {%- for i in range(0, 3) %}
+        <figure class="carousel__slide placeholder-media" style="min-height:320px;">[ photo ]</figure>
         {%- endfor %}
       </div>
     {%- endif %}
@@ -55,3 +61,29 @@ description: "Découvrez en images la pratique de l'Aïkido au dojo Kanjo Aïkid
     {%- endif %}
   </div>
 </section>
+<script>
+(function () {
+  document.querySelectorAll("[data-carousel]").forEach(function (car) {
+    var track = car.querySelector(".carousel__track");
+    var prev = car.querySelector(".carousel__btn--prev");
+    var next = car.querySelector(".carousel__btn--next");
+    if (!track || !prev || !next) return;
+    function step() { return track.clientWidth * 0.9; }
+    prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: "smooth" }); });
+    next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: "smooth" }); });
+    function update() {
+      var max = track.scrollWidth - track.clientWidth - 2;
+      var noScroll = max <= 0;
+      prev.style.display = next.style.display = noScroll ? "none" : "";
+      if (!noScroll) {
+        prev.disabled = track.scrollLeft <= 2;
+        next.disabled = track.scrollLeft >= max;
+      }
+    }
+    track.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    window.addEventListener("load", update);
+    update();
+  });
+})();
+</script>
