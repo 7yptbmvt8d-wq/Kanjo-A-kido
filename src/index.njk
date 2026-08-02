@@ -140,3 +140,65 @@ description: "Dojo d'Aïkido à Vescovato (Haute-Corse), ouvert à toutes et à 
   </div>
 </section>
 {% endif %}
+
+<!-- ===== AVIS GOOGLE (automatiques) ===== -->
+<section class="section section--alt section--divider" id="google-reviews" hidden>
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">★ — AVIS GOOGLE</div>
+      <h2 class="section-title">Ils nous ont noté sur Google</h2>
+      <p class="section-lead" id="gr-summary"></p>
+    </div>
+    <div class="testi-grid" id="gr-grid"></div>
+    {%- if site.reviewUrl %}
+    <div style="text-align:center; margin-top:44px;">
+      <a class="btn-outline" href="{{ site.reviewUrl }}" target="_blank" rel="noopener">LAISSER UN AVIS SUR GOOGLE</a>
+    </div>
+    {%- endif %}
+  </div>
+</section>
+<script>
+(function () {
+  function stars(n) {
+    var s = "";
+    for (var i = 1; i <= 5; i++) s += '<span class="' + (i <= n ? "is-on" : "") + '">★</span>';
+    return '<div class="testi__stars">' + s + "</div>";
+  }
+  fetch("/.netlify/functions/reviews")
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (!d || !d.reviews || !d.reviews.length) return;
+      var grid = document.getElementById("gr-grid");
+      d.reviews.forEach(function (rv) {
+        var fig = document.createElement("figure");
+        fig.className = "testi";
+        var mark = document.createElement("div");
+        mark.className = "testi__mark"; mark.textContent = "”";
+        var st = document.createElement("div"); st.innerHTML = stars(rv.rating || 5);
+        var q = document.createElement("blockquote");
+        q.className = "testi__quote"; q.textContent = rv.text;
+        var cite = document.createElement("figcaption");
+        cite.className = "testi__cite";
+        var nm = document.createElement("span");
+        nm.className = "testi__name"; nm.textContent = rv.author || "Client";
+        cite.appendChild(nm);
+        if (rv.time) {
+          var mt = document.createElement("span");
+          mt.className = "testi__meta"; mt.textContent = rv.time;
+          cite.appendChild(mt);
+        }
+        fig.appendChild(mark);
+        fig.appendChild(st.firstChild);
+        fig.appendChild(q);
+        fig.appendChild(cite);
+        grid.appendChild(fig);
+      });
+      if (d.rating) {
+        document.getElementById("gr-summary").textContent =
+          "Note moyenne de " + d.rating.toFixed(1) + " / 5 sur " + d.total + " avis Google.";
+      }
+      document.getElementById("google-reviews").hidden = false;
+    })
+    .catch(function () {});
+})();
+</script>
