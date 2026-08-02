@@ -269,7 +269,10 @@ img { display: block; max-width: 100%; }
   font-style: italic;
   font-size: 15px;
   color: #6f6757;
+  line-height: 1.7;
 }
+.footer-bar__copy a { color: var(--text-dim); text-decoration: underline; }
+.footer-bar__copy a:hover { color: var(--gold); }
 
 /* ===== SHARED UTILITIES ===== */
 .eyebrow {
