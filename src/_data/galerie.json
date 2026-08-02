@@ -4,19 +4,24 @@
       "title": "Saison 2026 – 2027",
       "photos": [
         {
-          "image": "/assets/uploads/enseignant.jpg"
+          "image": "/assets/uploads/enseignant.jpg",
+          "alt": "Sébastien De Raedt"
         },
         {
-          "image": "/assets/uploads/img_0431.jpg"
+          "image": "/assets/uploads/img_0431.jpg",
+          "alt": "Jean-Charles Lanusse"
         },
         {
-          "image": "/assets/uploads/5d86d558-b642-4778-8d4e-4780774d1036.jpg"
+          "image": "/assets/uploads/5d86d558-b642-4778-8d4e-4780774d1036.jpg",
+          "alt": "Un peu de bokken !"
         },
         {
-          "image": "/assets/uploads/img_0207.jpg"
+          "image": "/assets/uploads/img_0207.jpg",
+          "alt": "Stage à La Motte avec Xavier Dufeau"
         },
         {
-          "image": "/assets/uploads/1000070125_308745066248005.jpg"
+          "image": "/assets/uploads/1000070125_308745066248005.jpg",
+          "alt": "Le dojo de Tamura Senseï"
         }
       ]
     }
