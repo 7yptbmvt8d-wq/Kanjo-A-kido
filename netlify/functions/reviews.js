@@ -8,7 +8,7 @@ exports.handler = async function () {
   const key = process.env.GOOGLE_PLACES_KEY;
   const headers = {
     "Content-Type": "application/json",
-    "Cache-Control": "public, max-age=21600", // 6 h de cache CDN
+    "Cache-Control": "public, max-age=1800", // 30 min de cache CDN
   };
 
   if (!key) {

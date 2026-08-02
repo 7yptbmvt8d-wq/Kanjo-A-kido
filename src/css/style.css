@@ -26,6 +26,7 @@
 }
 
 html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -251,7 +252,8 @@ img { display: block; max-width: 100%; }
 }
 .footer-bar__links {
   display: flex;
-  gap: 26px;
+  flex-wrap: wrap;
+  gap: 16px 26px;
   font-family: var(--font-sans);
   font-size: 12px;
   letter-spacing: 1.5px;
