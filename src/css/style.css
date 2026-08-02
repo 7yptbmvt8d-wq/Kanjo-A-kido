@@ -955,8 +955,9 @@ img { display: block; max-width: 100%; }
 .carousel__slide img {
   display: block;
   width: 100%;
-  height: clamp(300px, 60vw, 600px);
-  object-fit: cover;
+  height: clamp(340px, 62vw, 620px);
+  object-fit: contain;
+  background: var(--bg);
 }
 .carousel__dots {
   display: flex;
