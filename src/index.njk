@@ -107,7 +107,7 @@ description: "Dojo d'Aïkido à Vescovato (Haute-Corse), ouvert à toutes et à 
   </div>
 </section>
 
-{% if p.testimonials %}
+{% if p.testimonials and p.testimonials.length %}
 <!-- ===== TÉMOIGNAGES ===== -->
 <section class="section">
   <div class="section__inner">
@@ -146,7 +146,7 @@ description: "Dojo d'Aïkido à Vescovato (Haute-Corse), ouvert à toutes et à 
   <div class="section__inner">
     <div class="section-head">
       <div class="eyebrow">★ — AVIS GOOGLE</div>
-      <h2 class="section-title">Ils nous ont noté sur Google</h2>
+      <h2 class="section-title">Ils pratiquent avec nous</h2>
       <p class="section-lead" id="gr-summary"></p>
     </div>
     <div class="testi-grid" id="gr-grid"></div>

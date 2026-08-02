@@ -39,9 +39,18 @@ exports.handler = async function () {
     );
     const d = await detailsRes.json();
 
+    // Prénom + initiale du nom de famille (protection de la vie privée)
+    function anonymize(name) {
+      if (!name) return "Client";
+      name = name.replace(/\(.*?\)/g, "").trim(); // retire un éventuel pseudo entre parenthèses
+      const parts = name.split(/\s+/).filter(Boolean);
+      if (parts.length < 2) return parts[0] || "Client";
+      return parts[0] + " " + parts[1].charAt(0).toUpperCase() + ".";
+    }
+
     const reviews = (d.reviews || [])
       .map((r) => ({
-        author: r.authorAttribution && r.authorAttribution.displayName,
+        author: anonymize(r.authorAttribution && r.authorAttribution.displayName),
         rating: r.rating,
         text: (r.originalText && r.originalText.text) || (r.text && r.text.text) || "",
         time: r.relativePublishTimeDescription || "",
