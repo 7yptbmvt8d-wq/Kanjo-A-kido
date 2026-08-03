@@ -34,6 +34,7 @@ description: "Découvrez en images la pratique de l'Aïkido au dojo Kanjo Aïkid
               {%- for photo in season.photos %}
               <figure class="carousel__slide">
                 <img loading="lazy" src="{{ photo.image }}" alt="{{ photo.alt }}">
+                {%- if photo.alt %}<figcaption class="carousel__caption">{{ photo.alt }}</figcaption>{% endif %}
               </figure>
               {%- endfor %}
             </div>
