@@ -128,9 +128,6 @@ collections:
               - { label: "Témoignage (texte)", name: quote, widget: text }
               - { label: "Prénom / nom", name: name, widget: string }
               - { label: "Rôle (sous le nom)", name: meta, widget: string, required: false, hint: "Ex. : Adhérent débutant, Maman d'un jeune pratiquant." }
-          - { label: "Voie — sur-titre", name: voieEyebrow, widget: string }
-          - { label: "Voie — titre", name: voieTitle, widget: string }
-          - { label: "Voie — paragraphes", name: voieParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
       - name: histoire
         label: "Histoire"
         file: "src/_data/pages/histoire.json"
@@ -154,6 +151,9 @@ collections:
           - { label: "Titre", name: title, widget: string }
           - { label: "Accroche", name: lead, widget: text }
           - { label: "Comment on pratique — paragraphes", name: pratiqueParas, widget: list, field: { label: "Paragraphe", name: p, widget: text } }
+          - { label: "Une voie pour chacun — sur-titre", name: voieEyebrow, widget: string, required: false }
+          - { label: "Une voie pour chacun — titre", name: voieTitle, widget: string, required: false }
+          - { label: "Une voie pour chacun — paragraphes", name: voieParas, widget: list, required: false, field: { label: "Paragraphe", name: p, widget: text } }
       - name: enseignant
         label: "Enseignant"
         file: "src/_data/pages/enseignant.json"
