@@ -124,8 +124,23 @@ description: "Découvrez la pratique, les horaires et les tarifs du dojo Kanjo A
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
+<!-- ===== UNE VOIE POUR CHACUN ===== -->
 <section class="section">
+  <div class="section__inner">
+    <div class="section-head">
+      <div class="eyebrow">{{ p.voieEyebrow }}</div>
+      <h2 class="section-title">{{ p.voieTitle }}</h2>
+    </div>
+    <div class="prose" style="max-width:760px; margin:0 auto; text-align:left;">
+      {%- for para in p.voieParas %}
+      <p>{{ para | safe }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section section--alt section--divider">
   <div class="section__inner">
     <div class="section-head">
       <div class="eyebrow">FAQ — QUESTIONS FRÉQUENTES</div>
