@@ -55,7 +55,7 @@
   "tarifs": [
     {
       "name": "Jeunes · 9 à 16 ans",
-      "amount": "155 €",
+      "amount": "195 €",
       "period": "par an",
       "featured": false,
       "features": [
@@ -66,7 +66,7 @@
     },
     {
       "name": "Adultes",
-      "amount": "225 €",
+      "amount": "255 €",
       "period": "par an",
       "featured": true,
       "features": [
@@ -82,7 +82,7 @@
       "featured": false,
       "features": [
         "Pour deux pratiquants",
-        "Licence & assurance FFAB",
+        "2 licences & assurances FFAB incluses",
         "Paiement en 3 fois possible"
       ]
     }
