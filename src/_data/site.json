@@ -37,11 +37,11 @@
   "logo": "/assets/uploads/kanjo-aikido-isulanu-noir-2048.webp",
   "horaires": [
     {
-      "label": "Aïki Baby",
+      "label": "Aïki Baby (4-5 ans)",
       "value": "Mercredi de 14h30 - 15h15"
     },
     {
-      "label": "Enfants",
+      "label": "Enfants (6-12 ans)",
       "value": "Mercredi de 15h15 - 16h30"
     },
     {
@@ -58,12 +58,23 @@
   "footerCopy": "Kanjo Aïkido Isulanu · Vescovato (Haute-Corse) · © 2026 · Isula di Corsica",
   "tarifs": [
     {
-      "name": "Jeunes · 9 à 16 ans",
+      "name": "Aïki Baby · 4 à 5 ans",
+      "amount": "150 €",
+      "period": "par an",
+      "featured": false,
+      "features": [
+        "Éveil au tatami",
+        "Chèque pass'sport accepté",
+        "Licence & assurance FFAB incluses"
+      ]
+    },
+    {
+      "name": "Enfants · 6 à 12 ans",
       "amount": "195 €",
       "period": "par an",
       "featured": false,
       "features": [
-        "Accès aux cours jeunes",
+        "Accès au cours enfants",
         "Chèque pass'sport accepté",
         "Licence & assurance FFAB incluses"
       ]

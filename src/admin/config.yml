@@ -55,7 +55,7 @@ collections:
             fields:
               - { label: "Libellé", name: label, widget: string }
               - { label: "Valeur", name: value, widget: string }
-          - label: "Tarifs"
+          - label: "Adhésions"
             name: tarifs
             widget: list
             fields:
