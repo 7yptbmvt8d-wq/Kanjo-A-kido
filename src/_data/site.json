@@ -37,8 +37,12 @@
   "logo": "/assets/uploads/kanjo-aikido-isulanu-noir-2048.webp",
   "horaires": [
     {
-      "label": "Jeunes (9 à 16 ans)",
-      "value": "Mercredi de 14h30 - 16h30"
+      "label": "Aïki Baby",
+      "value": "Mercredi de 14h30 - 15h15"
+    },
+    {
+      "label": "Enfants",
+      "value": "Mercredi de 15h15 - 16h30"
     },
     {
       "label": "Sénior - Grand débutant",
