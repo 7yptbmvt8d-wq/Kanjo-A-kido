@@ -19,28 +19,41 @@
       "type": "normal"
     },
     {
-      "date": "DÉC.",
-      "title": "Stage inter-dojos",
-      "dates": "Du 12 au 14 décembre 2026",
-      "desc": "Rencontre avec les dojos partenaires de l'île.",
-      "meta": "À CONFIRMER",
+      "date": "10 OCT.",
+      "title": "Stage ligue oiuvert à tous",
+      "dates": "",
+      "desc": "9h - 12h avec Fabrice Cast, Antoine Poydatz et Anne-Laure Gaillard",
+      "meta": "Dojo du Puy Sainte Réparade",
       "link": "",
       "poster": "",
       "type": "normal"
     },
     {
-      "date": "JANV.",
-      "title": "Stage technique — armes",
-      "desc": "Bokken & jō, travail des déplacements et de la distance.",
-      "meta": "À CONFIRMER",
+      "date": "16 JANV.",
+      "title": "Stage prépa 1/2 Dan",
+      "desc": "Lecomte et Orlando",
+      "meta": "Dojo d'Istres",
       "type": "normal"
     },
     {
-      "date": "JUIN",
-      "title": "Clôture de saison",
-      "desc": "",
-      "meta": "",
+      "date": "6 MARS",
+      "title": "Ecole des cadres",
+      "desc": "Buffet et Poydatz",
+      "meta": "Dojo d'Avignon",
       "type": "end"
+    },
+    {
+      "type": "normal",
+      "date": "11 AVR.",
+      "title": "Stage prépa 1/2 Dan",
+      "desc": "Buffet et Biehly",
+      "meta": "Dojo du Puy Sainte Réparade"
+    },
+    {
+      "type": "normal",
+      "date": "5 JUIN",
+      "title": "Examen 1/2 Dan",
+      "meta": "Dojo d'Orange"
     }
   ]
 }
