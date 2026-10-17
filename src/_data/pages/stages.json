@@ -47,14 +47,15 @@
       "title": "Ecole des cadres",
       "desc": "Buffet et Poydatz",
       "meta": "Dojo d'Avignon",
-      "type": "end"
+      "type": "normal"
     },
     {
-      "type": "normal",
+      "type": "featured",
       "date": "9 AVR.",
       "title": "Stage avec Hubert Audra Shihan",
       "dates": "9 au 11 avril 2027 ",
-      "link": "Shumeikan"
+      "link": "",
+      "meta": "Shumeikan"
     },
     {
       "type": "normal",
