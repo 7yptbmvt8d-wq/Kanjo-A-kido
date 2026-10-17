@@ -29,6 +29,13 @@
       "type": "normal"
     },
     {
+      "type": "normal",
+      "date": "5 DEC.",
+      "title": "Stage de ligue",
+      "dates": "5 au 6 décembre 2026",
+      "desc": "Le stage à lieu à Shin Aïkido à Sainte Lucie de Porto Vecchio"
+    },
+    {
       "date": "16 JANV.",
       "title": "Stage prépa 1/2 Dan",
       "desc": "Lecomte et Orlando",
@@ -41,6 +48,13 @@
       "desc": "Buffet et Poydatz",
       "meta": "Dojo d'Avignon",
       "type": "end"
+    },
+    {
+      "type": "normal",
+      "date": "9 AVR.",
+      "title": "Stage avec Hubert Audra Shihan",
+      "dates": "9 au 11 avril 2027 ",
+      "link": "Shumeikan"
     },
     {
       "type": "normal",
